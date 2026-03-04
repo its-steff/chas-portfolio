@@ -16,6 +16,15 @@ module.exports = function (eleventyConfig) {
       .getFilteredByGlob("src/content/projects/*.md")
       .sort((a, b) => b.date - a.date);
   });
+  eleventyConfig.addCollection("pages", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/content/pages/*.md")
+      .sort((a, b) => {
+        const titleA = (a.data.title || "").toLowerCase();
+        const titleB = (b.data.title || "").toLowerCase();
+        return titleA.localeCompare(titleB);
+      });
+  });
 
   return {
     templateFormats: ["hbs", "html", "md"],
