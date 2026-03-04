@@ -5,7 +5,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyPluginHandlebars);
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+  eleventyConfig.addWatchTarget("src/assets/css/**/*.css");
   eleventyConfig.addPassthroughCopy("src/admin/config.yml");
+  eleventyConfig.addPassthroughCopy("src/assets/css");
+  eleventyConfig.addPassthroughCopy("src/assets/icons");
   eleventyConfig.addPassthroughCopy("src/assets/uploads");
   eleventyConfig.addCollection("projects", function (collectionApi) {
     return collectionApi
