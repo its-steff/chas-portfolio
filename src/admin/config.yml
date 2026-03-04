@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "src/_data/site.yml"
+        fields:
+          - { label: "Hero Name", name: "hero_name", widget: "string" }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "text" }
+          - { label: "Intro", name: "intro", widget: "markdown" }
+
+  - name: "projects"
+    label: "Comic Projects"
+    label_singular: "Comic Project"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Role",
+          name: "role",
+          widget: "select",
+          options: ["Writer", "Illustrator", "Writer + Illustrator"],
+        }
+      - { label: "Release Date", name: "release_date", widget: "datetime" }
+      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
