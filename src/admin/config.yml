@@ -18,6 +18,7 @@ collections:
           - { label: "Hero Name", name: "hero_name", widget: "string" }
           - { label: "Hero Tagline", name: "hero_tagline", widget: "text" }
           - { label: "Intro", name: "intro", widget: "markdown" }
+          - { label: "CTA Text", name: "cta_text", widget: "string" }
 
   - name: "projects"
     label: "Comic Projects"

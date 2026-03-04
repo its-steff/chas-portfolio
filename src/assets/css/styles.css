@@ -24,6 +24,50 @@ h1 {
 }
 
 p {
-  margin: 0;
+  margin: 0 0 1rem;
   font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 3.3vw, 2rem);
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.tagline {
+  font-weight: 700;
+}
+
+.intro {
+  max-width: 40rem;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card {
+  padding: 1rem;
+  border: 1px solid #d9c9b4;
+  background: #fff6eb;
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-card p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.cms-link {
+  margin-top: 2rem;
 }
