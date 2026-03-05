@@ -11,21 +11,33 @@
         <span>{{ this.data.title }}</span>
       </a>
       {{/each}}
-      <button class="lang-toggle" type="button" aria-label="Toggle language">
+      <button
+        data-lang-toggle
+        class="lang-toggle"
+        type="button"
+        aria-label="{{t 'common.toggle_language' settings.lang i18n}}"
+      >
         {{> icons/globe class="icon-nav"}}
         <span>{{ settings.language_label }}</span>
       </button>
     </div>
 
     <details class="mobile-nav">
-      <summary aria-label="Open menu">{{> icons/scroll class="icon-lg"}}</summary>
+      <summary aria-label="{{t 'common.open_menu' settings.lang i18n}}">
+        {{> icons/scroll class="icon-lg"}}
+      </summary>
       <div class="mobile-nav-panel">
         {{#each collections.pages}}
         <a href="{{ this.url }}">
           <span>{{ this.data.title }}</span>
         </a>
         {{/each}}
-        <button class="lang-toggle" type="button" aria-label="Toggle language">
+        <button
+          data-lang-toggle
+          class="lang-toggle"
+          type="button"
+          aria-label="{{t 'common.toggle_language' settings.lang i18n}}"
+        >
           {{> icons/globe class="icon-nav"}}
           <span>{{ settings.language_label }}</span>
         </button>

@@ -12,7 +12,9 @@ title: Home
         <p class="intro">{{ home.intro }}</p>
         <div class="hero-actions">
           <a class="cta-link" href="/portfolio/">{{ home.cta_text }}</a>
-          <a class="cta-link cta-link-outline" href="/contact/">Contact</a>
+          <a class="cta-link cta-link-outline" href="/contact/"
+            >{{t "common.contact" settings.lang i18n}}</a
+          >
         </div>
       </div>
       <div class="hero-media">
@@ -61,7 +63,9 @@ title: Home
           event=this.data event_url=this.url}} {{/each}}
         </div>
         {{#if (gt (count collections.events) 3)}}
-        <a class="feed-more-link" href="/events/">View All Quests</a>
+        <a class="feed-more-link" href="/events/"
+          >{{t "home.view_all_quests" settings.lang i18n}}</a
+        >
         {{/if}}
       </div>
 
@@ -75,7 +79,7 @@ title: Home
           post=this.data post_url=this.url}} {{/each}}
         </div>
         {{#if (gt (count collections.blog_posts) 3)}}
-        <a class="feed-more-link" href="/blog/">Read More</a>
+        <a class="feed-more-link" href="/blog/">{{t "common.read_more" settings.lang i18n}}</a>
         {{/if}}
       </div>
     </div>

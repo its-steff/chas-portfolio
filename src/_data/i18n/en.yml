@@ -1,0 +1,8 @@
+common:
+  contact: "Contact"
+  read_more: "Read More"
+  toggle_language: "Toggle language"
+  open_menu: "Open menu"
+
+home:
+  view_all_quests: "View All Quests"

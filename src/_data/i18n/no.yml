@@ -1,0 +1,8 @@
+common:
+  contact: "Kontakt"
+  read_more: "Les mer"
+  toggle_language: "Bytt språk"
+  open_menu: "Åpne meny"
+
+home:
+  view_all_quests: "Se alle arrangementer"
