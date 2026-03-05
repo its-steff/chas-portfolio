@@ -1,69 +1,132 @@
 @use "../tokens" as *;
 
+.hero {
+  position: relative;
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2.75rem;
+  padding-block: clamp(1rem, 3vw, 3rem);
+}
+
+.hero-content {
+  max-width: 42rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  margin: 0 0 1rem;
+  color: $primary;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
 .hero h1 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(2.2rem, 6vw, 4.2rem);
-  line-height: 1.02;
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 6vw, 4.6rem);
+  line-height: 1.05;
   color: $ink;
   font-family: $font-display;
   font-weight: 500;
 }
 
-.hero {
-  margin-bottom: 2.75rem;
-}
-
-.tagline {
-  font-weight: 700;
-  color: $ink;
-}
-
 .intro {
-  max-width: 40rem;
+  max-width: 34rem;
   color: $muted;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .cta-link {
-  display: inline-block;
-  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   border-radius: 8px;
   border: 1px solid $primary;
   color: #fff;
   background: $primary;
-  padding: 0.62rem 0.95rem;
+  padding: 0.68rem 1.2rem;
   font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
 .cta-link:hover {
   background: #119f90;
 }
 
-.project-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.cta-link-outline {
+  background: transparent;
+  color: $ink;
+  border-color: rgba(20, 184, 166, 0.35);
+}
+
+.cta-link-outline:hover {
+  background: rgba(20, 184, 166, 0.08);
+}
+
+.hero-media {
+  position: relative;
   display: grid;
-  gap: 1rem;
+  place-items: center;
+  min-height: 18rem;
 }
 
-.project-card {
-  padding: 1rem;
-  border: 1px solid $line;
-  border-radius: 12px;
-  background: $surface;
-  box-shadow: 0 10px 28px rgba(20, 184, 166, 0.06);
+.hero-image-glow {
+  position: absolute;
+  width: clamp(14rem, 38vw, 21rem);
+  height: clamp(14rem, 38vw, 21rem);
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.22);
+  filter: blur(34px);
 }
 
-.project-card h3 {
-  margin: 0 0 0.5rem;
+.hero-image-frame {
+  --hero-image-scale: 1.06;
+  --hero-image-x: 2%;
+  --hero-image-y: -10%;
+
+  position: relative;
+  width: clamp(14rem, 38vw, 21rem);
+  height: clamp(14rem, 38vw, 21rem);
+  border-radius: 999px;
+  border: 4px solid rgba(20, 184, 166, 0.3);
+  background: rgba(243, 237, 228, 0.65);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
 }
 
-.project-card p {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
+.hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(var(--hero-image-x), var(--hero-image-y)) scale(var(--hero-image-scale));
+  transform-origin: center;
 }
 
-.cms-link {
-  margin-top: 2rem;
+.hero-fallback-icon {
+  width: 3rem;
+  height: 3rem;
+  color: rgba(42, 37, 32, 0.32);
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+  }
 }

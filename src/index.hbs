@@ -2,29 +2,45 @@
 layout: layouts/base.hbs
 title: Home
 ---
-<header class="hero">
-  <h1>{{ site.hero_name }}</h1>
-  <p class="tagline">{{ site.hero_tagline }}</p>
-  <p class="intro">{{ site.intro }}</p>
-  <a class="cta-link" href="/portfolio/">{{ site.cta_text }}</a>
-</header>
 
-<section class="projects">
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-badge">{{ site.hero_tagline }}</p>
+    <h1>{{ site.hero_name }}</h1>
+    <p class="intro">{{ site.intro }}</p>
+    <div class="hero-actions">
+      <a class="cta-link" href="/portfolio/">{{ site.cta_text }}</a>
+      <a class="cta-link cta-link-outline" href="/contact/">Contact</a>
+    </div>
+  </div>
+  <div class="hero-media">
+    <div class="hero-image-glow"></div>
+    <div class="hero-image-frame">
+      {{#if site.hero_image}}
+        <img src="{{ site.hero_image }}" alt="{{ site.hero_name }}" />
+      {{else}}
+        {{> icons/user class="hero-fallback-icon"}}
+      {{/if}}
+    </div>
+  </div>
+</section>
+
+{{!-- <section class="projects">
   <h2>Selected Work</h2>
 
   {{#if collections.projects.length}}
     <ul class="project-list">
       {{#each collections.projects}}
         <li class="project-card">
-          <h3><a href="{{ this.url }}">{{ this.data.title }}</a></h3>
-          <p>{{ this.data.role }}</p>
-          <p>{{ this.data.summary }}</p>
+          <h3><a href="{{this.url}}">{{this.data.title}}</a></h3>
+          <p>{{this.data.role}}</p>
+          <p>{{this.data.summary}}</p>
         </li>
       {{/each}}
     </ul>
   {{else}}
     <p>No projects yet. Add one in the CMS.</p>
   {{/if}}
-</section>
+</section> --}}
 
-<p class="cms-link"><a href="/admin/">Open CMS</a></p>
+{{! <p class="cms-link"><a href="/admin/">Open CMS</a></p> }}
