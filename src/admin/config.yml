@@ -17,12 +17,7 @@ collections:
         fields:
           - { label: "Hero Name", name: "hero_name", widget: "string" }
           - { label: "Hero Tagline", name: "hero_tagline", widget: "string" }
-          - {
-              label: "Hero Image",
-              name: "hero_image",
-              widget: "image",
-              required: false,
-            }
+          - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
           - { label: "Intro", name: "intro", widget: "markdown" }
           - { label: "CTA Text", name: "cta_text", widget: "string" }
 
@@ -35,45 +30,21 @@ collections:
         fields:
           - { label: "Site Name", name: "site_name", widget: "string" }
           - { label: "Logo Text", name: "logo_text", widget: "string" }
-          - {
-              label: "Language Label",
-              name: "language_label",
-              widget: "string",
-              required: false,
-            }
+          - { label: "Language Label", name: "language_label", widget: "string", required: false }
       - label: "Footer"
         name: "footer"
         file: "src/_data/site.yml"
         fields:
-          - {
-              label: "Footer Copyright Text",
-              name: "footer_copyright",
-              widget: "string",
-            }
+          - { label: "Footer Copyright Text", name: "footer_copyright", widget: "string" }
           - {
               label: "Social Intro Text",
               name: "social_intro_text",
               widget: "string",
               required: false,
             }
-          - {
-              label: "Instagram URL",
-              name: "instagram_url",
-              widget: "string",
-              required: false,
-            }
-          - {
-              label: "Tumblr URL",
-              name: "tumblr_url",
-              widget: "string",
-              required: false,
-            }
-          - {
-              label: "Bluesky URL",
-              name: "bluesky_url",
-              widget: "string",
-              required: false,
-            }
+          - { label: "Instagram URL", name: "instagram_url", widget: "string", required: false }
+          - { label: "Tumblr URL", name: "tumblr_url", widget: "string", required: false }
+          - { label: "Bluesky URL", name: "bluesky_url", widget: "string", required: false }
 
   - name: "navigation_pages"
     label: "Navigation Pages"
@@ -85,11 +56,30 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Cover Image",
-          name: "cover_image",
-          widget: "image",
-          required: false,
-        }
+      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "published_books"
+    label: "Published Books"
+    label_singular: "Book"
+    folder: "src/content/books"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Store Link", name: "store_link", widget: "string", required: false }
+      - { label: "CTA Text", name: "cta_text", widget: "string" }
+      - {
+          label: "Publication Year",
+          name: "publication_year",
+          widget: "string",
+          hint: "Use YYYY (example: 2024)",
+          pattern: ["^[0-9]{4}$", "Please use a 4-digit year (YYYY)."],
+        }

@@ -19,10 +19,8 @@ title: Home
         <div class="hero-image-glow"></div>
         <div class="hero-image-frame">
           {{#if home.hero_image}}
-            <img src="{{ home.hero_image }}" alt="{{ home.hero_name }}" />
-          {{else}}
-            {{> icons/user class="hero-fallback-icon"}}
-          {{/if}}
+          <img src="{{ home.hero_image }}" alt="{{ home.hero_name }}" />
+          {{else}} {{> icons/user class="hero-fallback-icon"}} {{/if}}
         </div>
       </div>
     </div>
@@ -31,33 +29,19 @@ title: Home
 
 <section class="gallery-section">
   <div class="layout-container">
-    <section class="gallery">
+    <div class="gallery">
       <div>
         <h2>Recent Publications</h2>
         <p>Recently published works</p>
       </div>
-      <div>Gallery here</div>
-    </section>
+      <div class="books-grid">
+        {{#each (take collections.published_books 4)}} {{> components/book-card/book-card
+        book=this.data}} {{/each}}
+      </div>
+    </div>
   </div>
 </section>
 
-
-{{!-- <section class="projects">
-  <h2>Selected Work</h2>
-
-  {{#if collections.projects.length}}
-    <ul class="project-list">
-      {{#each collections.projects}}
-        <li class="project-card">
-          <h3><a href="{{this.url}}">{{this.data.title}}</a></h3>
-          <p>{{this.data.role}}</p>
-          <p>{{this.data.summary}}</p>
-        </li>
-      {{/each}}
-    </ul>
-  {{else}}
-    <p>No projects yet. Add one in the CMS.</p>
-  {{/if}}
-</section> --}}
-
-{{! <p class="cms-link"><a href="/admin/">Open CMS</a></p> }}
+{{!
+<p class="cms-link"><a href="/admin/">Open CMS</a></p>
+}}

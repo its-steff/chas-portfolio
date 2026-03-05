@@ -209,6 +209,41 @@
     align-items: center;
   }
 }
+.books-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.book-card {
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.book-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  color: #2a2520;
+}
+
+.book-card__empty {
+  margin: 0;
+  color: #6b5d54;
+}
+
+@media (min-width: 700px) {
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1100px) {
+  .books-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
 .hero-section {
   padding-block: 0;
 }

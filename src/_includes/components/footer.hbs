@@ -7,22 +7,20 @@
     <div class="social-row">
       <span>{{ site.social_intro_text }}</span>
       {{#if site.instagram_url}}
-        <a href="{{ site.instagram_url }}" target="_blank" rel="noopener noreferrer">
-          {{!-- {{> icons/instagram class="icon-footer"}} --}}
-          <span>Instagram</span>
-        </a>
-      {{/if}}
-      {{#if site.tumblr_url}}
-        <a href="{{ site.tumblr_url }}" target="_blank" rel="noopener noreferrer">
-          {{!-- {{> icons/tumblr class="icon-footer"}} --}}
-          <span>Tumblr</span>
-        </a>
-      {{/if}}
-      {{#if site.bluesky_url}}
-        <a href="{{ site.bluesky_url }}" target="_blank" rel="noopener noreferrer">
-          {{!-- {{> icons/bluesky class="icon-footer"}} --}}
-          <span>Bluesky</span>
-        </a>
+      <a href="{{ site.instagram_url }}" target="_blank" rel="noopener noreferrer">
+        {{!-- {{> icons/instagram class="icon-footer"}} --}}
+        <span>Instagram</span>
+      </a>
+      {{/if}} {{#if site.tumblr_url}}
+      <a href="{{ site.tumblr_url }}" target="_blank" rel="noopener noreferrer">
+        {{!-- {{> icons/tumblr class="icon-footer"}} --}}
+        <span>Tumblr</span>
+      </a>
+      {{/if}} {{#if site.bluesky_url}}
+      <a href="{{ site.bluesky_url }}" target="_blank" rel="noopener noreferrer">
+        {{!-- {{> icons/bluesky class="icon-footer"}} --}}
+        <span>Bluesky</span>
+      </a>
       {{/if}}
     </div>
   </div>

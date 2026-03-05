@@ -1,5 +1,6 @@
 @use "tokens" as *;
 @use "layout";
+@use "../_includes/components/book-card/book-card";
 @use "pages/index";
 
 * {

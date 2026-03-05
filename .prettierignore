@@ -1,0 +1,6 @@
+node_modules
+_site
+src/assets/uploads
+src/assets/icons
+src/assets/css
+package-lock.json

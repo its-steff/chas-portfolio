@@ -11,20 +11,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/icons");
   eleventyConfig.addPassthroughCopy("src/assets/uploads");
-  eleventyConfig.addCollection("projects", function (collectionApi) {
-    return collectionApi
-      .getFilteredByGlob("src/content/projects/*.md")
-      .sort((a, b) => b.date - a.date);
-  });
+
   eleventyConfig.addCollection("pages", function (collectionApi) {
-    return collectionApi
-      .getFilteredByGlob("src/content/pages/*.md")
-      .sort((a, b) => {
-        const titleA = (a.data.title || "").toLowerCase();
-        const titleB = (b.data.title || "").toLowerCase();
-        return titleA.localeCompare(titleB);
-      });
+    return collectionApi.getFilteredByGlob("src/content/pages/*.md").sort((a, b) => {
+      const titleA = (a.data.title || "").toLowerCase();
+      const titleB = (b.data.title || "").toLowerCase();
+      return titleA.localeCompare(titleB);
+    });
   });
+  eleventyConfig.addCollection("published_books", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/books/*.md").sort((a, b) => {
+      const yearA = Number.parseInt(a.data.publication_year, 10);
+      const yearB = Number.parseInt(b.data.publication_year, 10);
+      const safeYearA = Number.isNaN(yearA) ? Number.MAX_SAFE_INTEGER : yearA;
+      const safeYearB = Number.isNaN(yearB) ? Number.MAX_SAFE_INTEGER : yearB;
+      return safeYearA - safeYearB;
+    });
+  });
+  eleventyConfig.addFilter("take", (arr, count) => (Array.isArray(arr) ? arr.slice(0, count) : []));
 
   return {
     templateFormats: ["hbs", "html", "md"],

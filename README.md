@@ -21,6 +21,7 @@
 No. Decap CMS itself does not require a Decap account.
 
 You do need:
+
 - A Git provider account (usually GitHub)
 - A hosting provider with auth/backend support (recommended: Netlify + Netlify Identity + Git Gateway)
 

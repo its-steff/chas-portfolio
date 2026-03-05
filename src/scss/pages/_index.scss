@@ -121,8 +121,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: translate(var(--hero-image-x), var(--hero-image-y))
-    scale(var(--hero-image-scale));
+  transform: translate(var(--hero-image-x), var(--hero-image-y)) scale(var(--hero-image-scale));
   transform-origin: center;
 }
 

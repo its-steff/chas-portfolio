@@ -7,9 +7,9 @@
 
     <div class="desktop-nav">
       {{#each collections.pages}}
-        <a href="{{ this.url }}">
-          <span>{{ this.data.title }}</span>
-        </a>
+      <a href="{{ this.url }}">
+        <span>{{ this.data.title }}</span>
+      </a>
       {{/each}}
       <button class="lang-toggle" type="button" aria-label="Toggle language">
         {{> icons/globe class="icon-nav"}}
@@ -18,14 +18,12 @@
     </div>
 
     <details class="mobile-nav">
-      <summary aria-label="Open menu">
-        {{> icons/scroll class="icon-lg"}}
-      </summary>
+      <summary aria-label="Open menu">{{> icons/scroll class="icon-lg"}}</summary>
       <div class="mobile-nav-panel">
         {{#each collections.pages}}
-          <a href="{{ this.url }}">
-            <span>{{ this.data.title }}</span>
-          </a>
+        <a href="{{ this.url }}">
+          <span>{{ this.data.title }}</span>
+        </a>
         {{/each}}
         <button class="lang-toggle" type="button" aria-label="Toggle language">
           {{> icons/globe class="icon-nav"}}
