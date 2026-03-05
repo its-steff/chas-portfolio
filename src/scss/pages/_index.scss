@@ -179,3 +179,69 @@
   background-color: $secondarySectionBackground;
   padding-block: 3rem;
 }
+
+.bottom-section {
+  padding-block: 3rem;
+}
+
+.home-feed-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.feed-column {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.feed-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.feed-heading h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+}
+
+.feed-heading .icon-svg {
+  color: $primary;
+}
+
+.feed-cards {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.feed-more-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  border-radius: 6px;
+  color: $ink;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.feed-more-link:hover {
+  background: rgba(20, 184, 166, 0.08);
+  border-color: rgba(20, 184, 166, 0.5);
+}
+
+@media (min-width: 900px) {
+  .home-feed-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.75rem;
+  }
+}

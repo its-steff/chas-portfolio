@@ -1,0 +1,49 @@
+@use "../../../scss/tokens" as *;
+
+.small-blog-card {
+  display: block;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 12px;
+  background: $surface;
+  padding: 1rem 1.15rem;
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.small-blog-card:hover {
+  border-color: rgba(20, 184, 166, 0.55);
+  box-shadow: 0 10px 24px rgba(20, 184, 166, 0.1);
+  transform: translateY(-1px);
+}
+
+.small-blog-card__content {
+  min-width: 0;
+}
+
+.small-blog-card__content h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-family: $font-display;
+  font-weight: 600;
+  color: $ink;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.small-blog-card__content p {
+  margin: 0;
+  color: $muted;
+  font-size: 1.1rem;
+  line-height: 1.45;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}

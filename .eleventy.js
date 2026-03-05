@@ -28,7 +28,37 @@ module.exports = function (eleventyConfig) {
       return safeYearA - safeYearB;
     });
   });
+  eleventyConfig.addCollection("events", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/events/*.md").sort((a, b) => {
+      return new Date(a.data.date) - new Date(b.data.date);
+    });
+  });
+  eleventyConfig.addCollection("blog_posts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/blog/*.md").sort((a, b) => {
+      return new Date(b.data.date) - new Date(a.data.date);
+    });
+  });
   eleventyConfig.addFilter("take", (arr, count) => (Array.isArray(arr) ? arr.slice(0, count) : []));
+  eleventyConfig.addFilter("count", (arr) => (Array.isArray(arr) ? arr.length : 0));
+  eleventyConfig.addFilter("gt", (a, b) => Number(a) > Number(b));
+  eleventyConfig.addFilter("eventDay", (value) => {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    return new Intl.DateTimeFormat("en-US", {
+      day: "2-digit",
+      timeZone: "UTC",
+    }).format(date);
+  });
+  eleventyConfig.addFilter("eventMonth", (value) => {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    return new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      timeZone: "UTC",
+    })
+      .format(date)
+      .toUpperCase();
+  });
 
   return {
     templateFormats: ["hbs", "html", "md"],
