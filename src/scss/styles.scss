@@ -1,6 +1,8 @@
 /*! Generated file note: `src/assets/css/styles.css` is compiled from SCSS sources in `src/scss` and `src/_includes/components/**`. Do not edit the CSS output directly. */
 @use "tokens" as *;
 @use "layout";
+@use "../_includes/components/nav/nav";
+@use "../_includes/components/footer/footer";
 @use "../_includes/components/book-card/book-card";
 @use "pages/index";
 

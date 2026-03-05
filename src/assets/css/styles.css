@@ -23,19 +23,14 @@
   height: 1.25rem;
 }
 
-.icon-nav {
-  width: 0.92rem;
-  height: 0.92rem;
-}
-
-.icon-footer {
-  width: 0.88rem;
-  height: 0.88rem;
-}
-
 .layout-container {
   width: min(1100px, 92vw);
   margin-inline: auto;
+}
+
+.page-main {
+  flex: 1;
+  padding-block: 3.5rem;
 }
 
 .site-header {
@@ -148,11 +143,19 @@
   gap: 0.25rem;
 }
 
-.page-main {
-  flex: 1;
-  padding-block: 3.5rem;
+.icon-nav {
+  width: 0.92rem;
+  height: 0.92rem;
 }
 
+@media (min-width: 900px) {
+  .desktop-nav {
+    display: flex;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
 .site-footer {
   border-top: 1px solid rgba(20, 184, 166, 0.2);
   background: #fdf9f3;
@@ -197,13 +200,12 @@
   color: #14b8a6;
 }
 
+.icon-footer {
+  width: 0.88rem;
+  height: 0.88rem;
+}
+
 @media (min-width: 900px) {
-  .desktop-nav {
-    display: flex;
-  }
-  .mobile-nav {
-    display: none;
-  }
   .site-footer-inner {
     flex-direction: row;
     justify-content: space-between;
