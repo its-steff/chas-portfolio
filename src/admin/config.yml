@@ -22,6 +22,8 @@ collections:
           - { label: "CTA Text", name: "cta_text", widget: "string" }
           - { label: "Gallery title", name: "gallery_title", widget: "string" }
           - { label: "Gallery Intro", name: "gallery_intro", widget: "markdown" }
+          - { label: "Event Title", name: "event_title", widget: "string" }
+          - {label: "Blog Post Title", name: "blog_post_title", widget: "string" }
 
   - name: "site"
     label: "Site Settings"
