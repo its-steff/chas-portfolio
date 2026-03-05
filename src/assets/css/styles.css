@@ -1,3 +1,4 @@
+/*! Generated file note: `src/assets/css/styles.css` is compiled from SCSS sources in `src/scss` and `src/_includes/components/**`. Do not edit the CSS output directly. */
 .site-shell {
   min-height: 100vh;
   display: flex;
@@ -211,19 +212,58 @@
 }
 .books-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .book-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
   border: 1px solid rgba(20, 184, 166, 0.2);
-  border-radius: 10px;
+  border-radius: 12px;
   background: #ffffff;
-  padding: 1rem;
+  overflow: hidden;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
-.book-card__title {
+.book-card:hover {
+  border-color: rgba(20, 184, 166, 0.5);
+  box-shadow: 0 12px 30px rgba(20, 184, 166, 0.12);
+}
+
+.book-card__media {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: rgba(20, 184, 166, 0.1);
+}
+
+.book-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.book-card:hover .book-card__media img {
+  transform: scale(1.08);
+}
+
+.book-card__fallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #6b5d54;
+}
+
+.book-card__header {
+  padding: 1.1rem 1.25rem;
+}
+
+.book-card__header h3 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
+  line-height: 1.1;
   font-family: "Cinzel", serif;
   font-weight: 500;
   color: #2a2520;
@@ -379,7 +419,38 @@
 }
 .gallery {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
+}
+
+.gallery-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.gallery-head h2 {
+  font-size: 1.85rem;
+}
+
+.gallery-head p {
+  margin: 0;
+  color: #6b5d54;
+  max-width: 52rem;
+}
+
+.gallery-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #14b8a6;
+  font-weight: 500;
+}
+
+.gallery-view-all:hover {
+  color: #119f90;
 }
 
 .gallery-section {

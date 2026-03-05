@@ -1,7 +1,16 @@
-<article class="book-card">
-  {{#if book.title}}
-    <h3 class="book-card__title">{{ book.title }}</h3>
-  {{else}}
-    <p class="book-card__empty">No title available</p>
-  {{/if}}
-</article>
+<a class="book-card" href="{{ book_url }}">
+  <div class="book-card__media">
+    {{#if book.cover_image}}
+      <img src="{{ book.cover_image }}" alt="{{ book.title }}" />
+    {{else}}
+      <div class="book-card__fallback">{{> icons/book-open class="icon-md"}}</div>
+    {{/if}}
+  </div>
+  <div class="book-card__header">
+    {{#if book.title}}
+      <h3>{{ book.title }}</h3>
+    {{else}}
+      <p class="book-card__empty">No title available</p>
+    {{/if}}
+  </div>
+</a>

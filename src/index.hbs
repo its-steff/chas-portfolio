@@ -30,13 +30,19 @@ title: Home
 <section class="gallery-section">
   <div class="layout-container">
     <div class="gallery">
-      <div>
-        <h2>Recent Publications</h2>
-        <p>Recently published works</p>
+      <div class="gallery-head">
+        <div>
+          <h2>{{home.gallery_title}}</h2>
+          <p>{{home.gallery_intro}}</p>
+        </div>
+        <a class="gallery-view-all" href="/gallery/">
+          <span>{{site.view_all_link}}</span>
+          {{> icons/arrow-right class="icon-nav"}}
+        </a>
       </div>
       <div class="books-grid">
         {{#each (take collections.published_books 4)}} {{> components/book-card/book-card
-        book=this.data}} {{/each}}
+        book=this.data book_url=this.url}} {{/each}}
       </div>
     </div>
   </div>

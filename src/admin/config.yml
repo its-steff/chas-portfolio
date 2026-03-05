@@ -20,6 +20,8 @@ collections:
           - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
           - { label: "Intro", name: "intro", widget: "markdown" }
           - { label: "CTA Text", name: "cta_text", widget: "string" }
+          - { label: "Gallery title", name: "gallery_title", widget: "string" }
+          - { label: "Gallery Intro", name: "gallery_intro", widget: "markdown" }
 
   - name: "site"
     label: "Site Settings"
@@ -31,6 +33,7 @@ collections:
           - { label: "Site Name", name: "site_name", widget: "string" }
           - { label: "Logo Text", name: "logo_text", widget: "string" }
           - { label: "Language Label", name: "language_label", widget: "string", required: false }
+          - { label: "View all link", name: "view_all_link", widget: "string", required: false }
       - label: "Footer"
         name: "footer"
         file: "src/_data/site.yml"
