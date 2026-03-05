@@ -2,26 +2,28 @@
   <div class="container site-footer-inner">
     <p class="footer-brand">
       {{> icons/feather class="icon-footer"}}
-      <span>© 2026 Steff Dziadkowiec. All rights reserved.</span>
+      <span>{{ site.footer_copyright }}</span>
     </p>
     <div class="social-row">
-      <span>Follow the journey:</span>
-      <a href="https://instagram.com/caelumnightwhisper" target="_blank" rel="noopener noreferrer">
-        {{> icons/instagram class="icon-footer"}}
-        <span>Instagram</span>
-      </a>
-      <a href="https://twitter.com/caelumnightwhisper" target="_blank" rel="noopener noreferrer">
-        {{> icons/twitter class="icon-footer"}}
-        <span>Twitter</span>
-      </a>
-      <a href="https://facebook.com/caelumnightwhisper" target="_blank" rel="noopener noreferrer">
-        {{> icons/facebook class="icon-footer"}}
-        <span>Facebook</span>
-      </a>
-      <a href="https://artstation.com/caelumnightwhisper" target="_blank" rel="noopener noreferrer">
-        {{> icons/feather class="icon-footer"}}
-        <span>ArtStation</span>
-      </a>
+      <span>{{ site.social_intro_text }}</span>
+      {{#if site.instagram_url}}
+        <a href="{{ site.instagram_url }}" target="_blank" rel="noopener noreferrer">
+          {{!-- {{> icons/instagram class="icon-footer"}} --}}
+          <span>Instagram</span>
+        </a>
+      {{/if}}
+      {{#if site.tumblr_url}}
+        <a href="{{ site.tumblr_url }}" target="_blank" rel="noopener noreferrer">
+          {{!-- {{> icons/tumblr class="icon-footer"}} --}}
+          <span>Tumblr</span>
+        </a>
+      {{/if}}
+      {{#if site.bluesky_url}}
+        <a href="{{ site.bluesky_url }}" target="_blank" rel="noopener noreferrer">
+          {{!-- {{> icons/bluesky class="icon-footer"}} --}}
+          <span>Bluesky</span>
+        </a>
+      {{/if}}
     </div>
   </div>
 </footer>

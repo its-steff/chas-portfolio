@@ -5,19 +5,19 @@ title: Home
 
 <section class="hero">
   <div class="hero-content">
-    <p class="hero-badge">{{ site.hero_tagline }}</p>
-    <h1>{{ site.hero_name }}</h1>
-    <p class="intro">{{ site.intro }}</p>
+    <p class="hero-badge">{{ home.hero_tagline }}</p>
+    <h1>{{ home.hero_name }}</h1>
+    <p class="intro">{{ home.intro }}</p>
     <div class="hero-actions">
-      <a class="cta-link" href="/portfolio/">{{ site.cta_text }}</a>
+      <a class="cta-link" href="/portfolio/">{{ home.cta_text }}</a>
       <a class="cta-link cta-link-outline" href="/contact/">Contact</a>
     </div>
   </div>
   <div class="hero-media">
     <div class="hero-image-glow"></div>
     <div class="hero-image-frame">
-      {{#if site.hero_image}}
-        <img src="{{ site.hero_image }}" alt="{{ site.hero_name }}" />
+      {{#if home.hero_image}}
+        <img src="{{ home.hero_image }}" alt="{{ home.hero_name }}" />
       {{else}}
         {{> icons/user class="hero-fallback-icon"}}
       {{/if}}

@@ -8,41 +8,75 @@ media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "site"
-    label: "Site Settings"
+  - name: "Homepage"
+    label: "Homepage"
     files:
       - label: "Homepage"
         name: "homepage"
-        file: "src/_data/site.yml"
+        file: "src/_data/home.yml"
         fields:
           - { label: "Hero Name", name: "hero_name", widget: "string" }
-          - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string" }
+          - {
+              label: "Hero Image",
+              name: "hero_image",
+              widget: "image",
+              required: false,
+            }
           - { label: "Intro", name: "intro", widget: "markdown" }
           - { label: "CTA Text", name: "cta_text", widget: "string" }
 
-  - name: "projects"
-    label: "Comic Projects"
-    label_singular: "Comic Project"
-    folder: "src/content/projects"
-    create: true
-    slug: "{{slug}}"
-    extension: "md"
-    format: "frontmatter"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Role",
-          name: "role",
-          widget: "select",
-          options: ["Writer", "Illustrator", "Writer + Illustrator"],
-        }
-      - { label: "Release Date", name: "release_date", widget: "datetime" }
-      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - label: "Global"
+        name: "global"
+        file: "src/_data/settings.yml"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Logo Text", name: "logo_text", widget: "string" }
+          - {
+              label: "Language Label",
+              name: "language_label",
+              widget: "string",
+              required: false,
+            }
+      - label: "Footer"
+        name: "footer"
+        file: "src/_data/site.yml"
+        fields:
+          - {
+              label: "Footer Copyright Text",
+              name: "footer_copyright",
+              widget: "string",
+            }
+          - {
+              label: "Social Intro Text",
+              name: "social_intro_text",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Instagram URL",
+              name: "instagram_url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Tumblr URL",
+              name: "tumblr_url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Bluesky URL",
+              name: "bluesky_url",
+              widget: "string",
+              required: false,
+            }
 
-  - name: "pages"
-    label: "Pages"
+  - name: "navigation_pages"
+    label: "Navigation Pages"
     label_singular: "Page"
     folder: "src/content/pages"
     create: true
@@ -51,6 +85,11 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+      - {
+          label: "Cover Image",
+          name: "cover_image",
+          widget: "image",
+          required: false,
+        }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
