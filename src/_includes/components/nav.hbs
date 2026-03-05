@@ -1,0 +1,37 @@
+<header class="site-header">
+  <nav class="site-nav container">
+    <a class="logo" href="/">
+      {{> icons/feather class="icon-md logo-mark"}}
+      <span class="logo-text">Cha's Illustration</span>
+    </a>
+
+    <div class="desktop-nav">
+      {{#each collections.pages}}
+        <a href="{{ this.url }}">
+          <span>{{ this.data.title }}</span>
+        </a>
+      {{/each}}
+      <button class="lang-toggle" type="button" aria-label="Toggle language">
+        {{> icons/globe class="icon-nav"}}
+        <span>EN</span>
+      </button>
+    </div>
+
+    <details class="mobile-nav">
+      <summary aria-label="Open menu">
+        {{> icons/scroll class="icon-lg"}}
+      </summary>
+      <div class="mobile-nav-panel">
+        {{#each collections.pages}}
+          <a href="{{ this.url }}">
+            <span>{{ this.data.title }}</span>
+          </a>
+        {{/each}}
+        <button class="lang-toggle" type="button" aria-label="Toggle language">
+          {{> icons/globe class="icon-nav"}}
+          <span>EN</span>
+        </button>
+      </div>
+    </details>
+  </nav>
+</header>

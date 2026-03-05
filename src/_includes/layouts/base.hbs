@@ -14,75 +14,13 @@
   </head>
   <body>
     <div class="site-shell">
-      <header class="site-header">
-        <nav class="site-nav container">
-          <a class="logo" href="/">
-            {{> icons/feather class="icon-md logo-mark"}}
-            <span class="logo-text">Cha's Illustration</span>
-          </a>
-
-          <div class="desktop-nav">
-            {{#each collections.pages}}
-              <a href="{{ this.url }}">
-                <span>{{ this.data.title }}</span>
-              </a>
-            {{/each}}
-            <button class="lang-toggle" type="button" aria-label="Toggle language">
-              {{> icons/globe class="icon-nav"}}
-              <span>EN</span>
-            </button>
-          </div>
-
-          <details class="mobile-nav">
-            <summary aria-label="Open menu">
-              {{> icons/scroll class="icon-lg"}}
-            </summary>
-            <div class="mobile-nav-panel">
-              {{#each collections.pages}}
-                <a href="{{ this.url }}">
-                  <span>{{ this.data.title }}</span>
-                </a>
-              {{/each}}
-              <button class="lang-toggle" type="button" aria-label="Toggle language">
-                {{> icons/globe class="icon-nav"}}
-                <span>EN</span>
-              </button>
-            </div>
-          </details>
-        </nav>
-      </header>
+      {{> components/nav}}
 
       <main class="container page-main">
         {{{ content }}}
       </main>
 
-      <footer class="site-footer">
-        <div class="container site-footer-inner">
-          <p class="footer-brand">
-            {{> icons/feather class="icon-footer"}}
-            <span>© 2026 Caelum Nightwhisper. All rights reserved.</span>
-          </p>
-          <div class="social-row">
-            <span>Follow the journey:</span>
-            <a href="https://instagram.com/caelumnightwhisper" target="_blank" rel="noopener noreferrer">
-              {{> icons/instagram class="icon-footer"}}
-              <span>Instagram</span>
-            </a>
-            <a href="https://twitter.com/caelumnightwhisper" target="_blank" rel="noopener noreferrer">
-              {{> icons/twitter class="icon-footer"}}
-              <span>Twitter</span>
-            </a>
-            <a href="https://facebook.com/caelumnightwhisper" target="_blank" rel="noopener noreferrer">
-              {{> icons/facebook class="icon-footer"}}
-              <span>Facebook</span>
-            </a>
-            <a href="https://artstation.com/caelumnightwhisper" target="_blank" rel="noopener noreferrer">
-              {{> icons/feather class="icon-footer"}}
-              <span>ArtStation</span>
-            </a>
-          </div>
-        </div>
-      </footer>
+      {{> components/footer}}
     </div>
   </body>
 </html>

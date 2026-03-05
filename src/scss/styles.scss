@@ -1,5 +1,6 @@
 @use "tokens" as *;
 @use "layout";
+@use "pages/index";
 
 * {
   box-sizing: border-box;
@@ -13,15 +14,6 @@ body {
   background: $bg;
 }
 
-.hero h1 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(2.2rem, 6vw, 4.2rem);
-  line-height: 1.02;
-  color: $ink;
-  font-family: $font-display;
-  font-weight: 500;
-}
-
 p {
   margin: 0 0 1rem;
   font-size: clamp(1rem, 1.9vw, 1.22rem);
@@ -32,65 +24,6 @@ h2 {
   font-size: clamp(1.45rem, 3.2vw, 2rem);
   font-family: $font-display;
   font-weight: 500;
-}
-
-.hero {
-  margin-bottom: 2.75rem;
-}
-
-.tagline {
-  font-weight: 700;
-  color: $ink;
-}
-
-.intro {
-  max-width: 40rem;
-  color: $muted;
-}
-
-.cta-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  text-decoration: none;
-  border-radius: 8px;
-  border: 1px solid $primary;
-  color: #fff;
-  background: $primary;
-  padding: 0.62rem 0.95rem;
-  font-weight: 500;
-}
-
-.cta-link:hover {
-  background: #119f90;
-}
-
-.project-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1rem;
-}
-
-.project-card {
-  padding: 1rem;
-  border: 1px solid $line;
-  border-radius: 12px;
-  background: $surface;
-  box-shadow: 0 10px 28px rgba(20, 184, 166, 0.06);
-}
-
-.project-card h3 {
-  margin: 0 0 0.5rem;
-}
-
-.project-card p {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
-}
-
-.cms-link {
-  margin-top: 2rem;
 }
 
 .page-placeholder h1 {
