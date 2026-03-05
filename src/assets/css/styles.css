@@ -32,7 +32,7 @@
   height: 0.88rem;
 }
 
-.container {
+.layout-container {
   width: min(1100px, 92vw);
   margin-inline: auto;
 }
@@ -43,7 +43,7 @@
   z-index: 50;
   border-bottom: 1px solid rgba(20, 184, 166, 0.2);
   backdrop-filter: blur(8px);
-  background: #FFFEFD;
+  background: #fffefd;
 }
 
 .site-nav {
@@ -156,7 +156,7 @@
   border-top: 1px solid rgba(20, 184, 166, 0.2);
   background: #fdf9f3;
   padding-block: 2rem;
-  background-color: #FFFEFD;
+  background-color: #fffefd;
 }
 
 .site-footer-inner {
@@ -209,6 +209,10 @@
     align-items: center;
   }
 }
+.hero-section {
+  padding-block: 0;
+}
+
 .hero {
   position: relative;
   display: grid;
@@ -338,6 +342,17 @@
     gap: 3.5rem;
   }
 }
+.gallery {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.gallery-section {
+  width: 100%;
+  background-color: #fbf6ef;
+  padding-block: 3rem;
+}
+
 * {
   box-sizing: border-box;
 }
