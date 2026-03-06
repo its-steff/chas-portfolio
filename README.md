@@ -49,3 +49,7 @@ You do need:
 - `src/_data/site.yml`: homepage data edited from CMS
 - `src/content/projects/*.md`: comic project entries edited from CMS
 - `src/admin/config.yml`: Decap CMS configuration
+
+## Language switching and translations
+
+- See detailed guide: `docs/i18n.md`
