@@ -18,7 +18,7 @@
         aria-label="{{t 'common.toggle_language' lang i18n}}"
       >
         {{> icons/globe class="icon-nav"}}
-        <span>{{ settings.language_label }}</span>
+        <span>{{#if (eq lang "no")}}NO{{else}}EN{{/if}}</span>
       </button>
     </div>
 
@@ -39,7 +39,7 @@
           aria-label="{{t 'common.toggle_language' lang i18n}}"
         >
           {{> icons/globe class="icon-nav"}}
-          <span>{{ settings.language_label }}</span>
+          <span>{{#if (eq lang "no")}}NO{{else}}EN{{/if}}</span>
         </button>
       </div>
     </details>

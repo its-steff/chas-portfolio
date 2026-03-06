@@ -85,6 +85,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("take", (arr, count) => (Array.isArray(arr) ? arr.slice(0, count) : []));
   eleventyConfig.addFilter("count", (arr) => (Array.isArray(arr) ? arr.length : 0));
   eleventyConfig.addFilter("gt", (a, b) => Number(a) > Number(b));
+  eleventyConfig.addFilter("eq", (a, b) => a === b);
   eleventyConfig.addFilter("localize", (value, lang) => localizeData(value, lang));
   eleventyConfig.addFilter("t", (key, lang, i18n) => {
     const locale = typeof lang === "string" && lang ? lang : "en";
