@@ -56,8 +56,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/icons");
   eleventyConfig.addPassthroughCopy("src/assets/uploads");
 
-  eleventyConfig.addCollection("pages", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/content/pages/*.md").sort((a, b) => {
+  eleventyConfig.addCollection("navigation_routes", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/routes/*.md").sort((a, b) => {
       const pageA = localizeData(a.data, "en");
       const pageB = localizeData(b.data, "en");
       const titleA = String(pageA?.title || "").toLowerCase();
