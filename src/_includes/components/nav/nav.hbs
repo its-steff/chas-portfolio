@@ -15,7 +15,7 @@
         data-lang-toggle
         class="lang-toggle"
         type="button"
-        aria-label="{{t 'common.toggle_language' settings.lang i18n}}"
+        aria-label="{{t 'common.toggle_language' lang i18n}}"
       >
         {{> icons/globe class="icon-nav"}}
         <span>{{ settings.language_label }}</span>
@@ -23,7 +23,7 @@
     </div>
 
     <details class="mobile-nav">
-      <summary aria-label="{{t 'common.open_menu' settings.lang i18n}}">
+      <summary aria-label="{{t 'common.open_menu' lang i18n}}">
         {{> icons/scroll class="icon-lg"}}
       </summary>
       <div class="mobile-nav-panel">
@@ -36,7 +36,7 @@
           data-lang-toggle
           class="lang-toggle"
           type="button"
-          aria-label="{{t 'common.toggle_language' settings.lang i18n}}"
+          aria-label="{{t 'common.toggle_language' lang i18n}}"
         >
           {{> icons/globe class="icon-nav"}}
           <span>{{ settings.language_label }}</span>

@@ -10,6 +10,40 @@ function getByPath(obj, path) {
   }, obj);
 }
 
+function localizeData(value, lang) {
+  if (Array.isArray(value)) {
+    return value.map((item) => localizeData(item, lang));
+  }
+  if (!value || typeof value !== "object") return value;
+
+  const locale = typeof lang === "string" && lang ? lang : "en";
+  const keys = Object.keys(value);
+  const localeKeySet = new Set([locale, "en", "no"]);
+  const looksLikeLocalizedLeaf =
+    keys.length > 0 &&
+    keys.some((key) => key === locale || key === "en") &&
+    keys.every((key) => localeKeySet.has(key));
+
+  if (looksLikeLocalizedLeaf) {
+    if (value[locale] !== undefined && value[locale] !== null && value[locale] !== "") {
+      return value[locale];
+    }
+    return value.en;
+  }
+
+  const hasLocaleObject = typeof value[locale] === "object" && value[locale] !== null;
+  const hasEnObject = typeof value.en === "object" && value.en !== null;
+  if (hasLocaleObject) return value[locale];
+  if (hasEnObject) return value.en;
+
+  const localizedObject = {};
+  for (const key of keys) {
+    localizedObject[key] = localizeData(value[key], locale);
+  }
+
+  return localizedObject;
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyPluginHandlebars);
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
@@ -51,6 +85,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("take", (arr, count) => (Array.isArray(arr) ? arr.slice(0, count) : []));
   eleventyConfig.addFilter("count", (arr) => (Array.isArray(arr) ? arr.length : 0));
   eleventyConfig.addFilter("gt", (a, b) => Number(a) > Number(b));
+  eleventyConfig.addFilter("localize", (value, lang) => localizeData(value, lang));
   eleventyConfig.addFilter("t", (key, lang, i18n) => {
     const locale = typeof lang === "string" && lang ? lang : "en";
     const dict = i18n && typeof i18n === "object" ? i18n : {};

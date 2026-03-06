@@ -1,0 +1,85 @@
+{{#with (localize home lang) as |home_data|}}
+<section class="hero-section">
+  <div class="layout-container">
+    <div class="hero">
+      <div class="hero-content">
+        <p class="hero-badge">{{ home_data.hero_tagline }}</p>
+        <h1>{{ home_data.hero_name }}</h1>
+        <p class="intro">{{ home_data.intro }}</p>
+        <div class="hero-actions">
+          <a class="cta-link" href="/portfolio/">{{ home_data.cta_text }}</a>
+          <a class="cta-link cta-link-outline" href="/contact/"
+            >{{t "common.contact" @root.lang @root.i18n}}</a
+          >
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-image-glow"></div>
+        <div class="hero-image-frame">
+          {{#if home_data.hero_image}}
+          <img src="{{ home_data.hero_image }}" alt="{{ home_data.hero_name }}" />
+          {{else}} {{> icons/user class="hero-fallback-icon"}} {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="layout-container">
+    <div class="gallery">
+      <div class="gallery-head">
+        <div>
+          <h2>{{home_data.gallery_title}}</h2>
+          <p>{{home_data.gallery_intro}}</p>
+        </div>
+        <a class="gallery-view-all" href="/gallery/">
+          <span>{{@root.site.view_all_link}}</span>
+          {{> icons/arrow-right class="icon-nav"}}
+        </a>
+      </div>
+      <div class="books-grid">
+        {{#each (take @root.collections.published_books 4)}} {{> components/book-card/book-card
+        book=this.data book_url=this.url}} {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-section">
+  <div class="layout-container">
+    <div class="home-feed-grid">
+      <div class="feed-column">
+        <div class="feed-heading">
+          {{> icons/calendar class="icon-lg"}}
+          <h2>{{home_data.event_title}}</h2>
+        </div>
+        <div class="feed-cards">
+          {{#each (take @root.collections.events 3)}} {{>
+          components/small-event-card/small-event-card event=this.data event_url=this.url}}
+          {{/each}}
+        </div>
+        {{#if (gt (count @root.collections.events) 3)}}
+        <a class="feed-more-link" href="/events/"
+          >{{t "home.view_all_quests" @root.lang @root.i18n}}</a
+        >
+        {{/if}}
+      </div>
+
+      <div class="feed-column">
+        <div class="feed-heading">
+          {{> icons/book-open class="icon-lg"}}
+          <h2>{{home_data.blog_post_title}}</h2>
+        </div>
+        <div class="feed-cards">
+          {{#each (take @root.collections.blog_posts 3)}} {{>
+          components/small-blog-card/small-blog-card post=this.data post_url=this.url}} {{/each}}
+        </div>
+        {{#if (gt (count @root.collections.blog_posts) 3)}}
+        <a class="feed-more-link" href="/blog/">{{t "common.read_more" @root.lang @root.i18n}}</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>
+{{/with}}

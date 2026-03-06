@@ -4,26 +4,39 @@ backend:
 
 local_backend: true
 
+i18n:
+  structure: single_file
+  locales: [en, no]
+  default_locale: en
+
 media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
   - name: "Homepage"
     label: "Homepage"
+    i18n: true
     files:
       - label: "Homepage"
         name: "homepage"
         file: "src/_data/home.yml"
+        i18n: true
         fields:
-          - { label: "Hero Name", name: "hero_name", widget: "string" }
-          - { label: "Hero Tagline", name: "hero_tagline", widget: "string" }
-          - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
-          - { label: "Intro", name: "intro", widget: "markdown" }
-          - { label: "CTA Text", name: "cta_text", widget: "string" }
-          - { label: "Gallery title", name: "gallery_title", widget: "string" }
-          - { label: "Gallery Intro", name: "gallery_intro", widget: "markdown" }
-          - { label: "Event Title", name: "event_title", widget: "string" }
-          - { label: "Blog Post Title", name: "blog_post_title", widget: "string" }
+          - { label: "Hero Name", name: "hero_name", widget: "string", i18n: true }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", i18n: true }
+          - {
+              label: "Hero Image",
+              name: "hero_image",
+              widget: "image",
+              required: false,
+              i18n: duplicate,
+            }
+          - { label: "Intro", name: "intro", widget: "markdown", i18n: true }
+          - { label: "CTA Text", name: "cta_text", widget: "string", i18n: true }
+          - { label: "Gallery title", name: "gallery_title", widget: "string", i18n: true }
+          - { label: "Gallery Intro", name: "gallery_intro", widget: "markdown", i18n: true }
+          - { label: "Event Title", name: "event_title", widget: "string", i18n: true }
+          - { label: "Blog Post Title", name: "blog_post_title", widget: "string", i18n: true }
 
   - name: "site"
     label: "Site Settings"

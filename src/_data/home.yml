@@ -1,11 +1,23 @@
-hero_name: Cha Sandmæl
-hero_tagline: Comic Book Author & Illustrator
-hero_image: /assets/uploads/chahero.jpg
-intro: Weaving tales of ancient friends and forgotten dragons through hand-drawn
-  illustrations and whimsical narratives.
-cta_text: View Portfolio
-gallery_title: Recent Publications
-gallery_intro: Latest published works including authored and illustrated graphic
-  novels and illustrated books.
-event_title: Upcoming Quests
-blog_post_title: Chronicles & Musings
+en:
+  hero_tagline: Comic Book Author & Illustrator
+  gallery_title: Recent Publications
+  intro: Weaving tales of ancient friends and forgotten dragons through
+    hand-drawn    illustrations and whimsical narratives.
+  hero_name: Cha Sandmæl
+  event_title: Upcoming Quests
+  hero_image: /assets/uploads/chahero.jpg
+  blog_post_title: Chronicles & Musings
+  cta_text: View Portfolio
+  gallery_intro: Latest published works including authored and illustrated graphic
+    novels and    illustrated books.
+no:
+  hero_tagline: Tegneserieforfatter og illustratør
+  gallery_title: Nylige utgivelser
+  intro: Vever fortellinger om gamle venner og glemte drager gjennom
+    håndtegnede    illustrasjoner og lekne narrativer.
+  hero_name: Cha Sandmæl
+  event_title: Kommende arrangementer
+  hero_image: /assets/uploads/chahero.jpg
+  blog_post_title: Krøniker og betraktninger
+  cta_text: Se portefølje
+  gallery_intro: Siste utgitte verk, inkludert grafiske romaner og illustrerte bøker.
