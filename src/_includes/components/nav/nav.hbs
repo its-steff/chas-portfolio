@@ -6,11 +6,11 @@
     </a>
 
     <div class="desktop-nav">
-      {{#each collections.pages}}
-      <a href="{{ this.url }}">
-        <span>{{ this.data.title }}</span>
+      {{#each collections.pages}} {{#with (localize this.data @root.lang) as |page|}}
+      <a href="{{#if (eq @root.lang 'no')}}{{ page.route_no }}{{else}}{{ page.route_en }}{{/if}}">
+        <span>{{ page.title }}</span>
       </a>
-      {{/each}}
+      {{/with}} {{/each}}
       <button
         data-lang-toggle
         class="lang-toggle"
@@ -27,11 +27,11 @@
         {{> icons/scroll class="icon-lg"}}
       </summary>
       <div class="mobile-nav-panel">
-        {{#each collections.pages}}
-        <a href="{{ this.url }}">
-          <span>{{ this.data.title }}</span>
+        {{#each collections.pages}} {{#with (localize this.data @root.lang) as |page|}}
+        <a href="{{#if (eq @root.lang 'no')}}{{ page.route_no }}{{else}}{{ page.route_en }}{{/if}}">
+          <span>{{ page.title }}</span>
         </a>
-        {{/each}}
+        {{/with}} {{/each}}
         <button
           data-lang-toggle
           class="lang-toggle"

@@ -67,16 +67,25 @@ collections:
   - name: "navigation_pages"
     label: "Navigation Pages"
     label_singular: "Page"
+    i18n: true
     folder: "src/content/pages"
     create: true
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Route (EN)", name: "route_en", widget: "string", required: true, i18n: duplicate }
+      - { label: "Route (NO)", name: "route_no", widget: "string", required: true, i18n: duplicate }
+      - {
+          label: "Cover Image",
+          name: "cover_image",
+          widget: "image",
+          required: false,
+          i18n: duplicate,
+        }
+      - { label: "Summary", name: "summary", widget: "text", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
   - name: "published_books"
     label: "Published Books"

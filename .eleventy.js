@@ -58,8 +58,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("pages", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/content/pages/*.md").sort((a, b) => {
-      const titleA = (a.data.title || "").toLowerCase();
-      const titleB = (b.data.title || "").toLowerCase();
+      const pageA = localizeData(a.data, "en");
+      const pageB = localizeData(b.data, "en");
+      const titleA = String(pageA?.title || "").toLowerCase();
+      const titleB = String(pageB?.title || "").toLowerCase();
       return titleA.localeCompare(titleB);
     });
   });
