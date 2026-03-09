@@ -44,6 +44,43 @@ function localizeData(value, lang) {
   return localizedObject;
 }
 
+function getLocalizedField(record, field, lang) {
+  if (!record || typeof record !== "object") return undefined;
+  const locale = typeof lang === "string" && lang ? lang : "en";
+
+  // Shape A (Decap single_file): { en: { title: ... }, no: { title: ... } }
+  const localeObj = record[locale];
+  if (
+    localeObj &&
+    typeof localeObj === "object" &&
+    Object.prototype.hasOwnProperty.call(localeObj, field)
+  ) {
+    const localizedValue = localeObj[field];
+    if (localizedValue !== undefined && localizedValue !== null && localizedValue !== "") {
+      return localizedValue;
+    }
+  }
+
+  const fallbackEnObj = record.en;
+  if (
+    fallbackEnObj &&
+    typeof fallbackEnObj === "object" &&
+    Object.prototype.hasOwnProperty.call(fallbackEnObj, field)
+  ) {
+    const fallbackValue = fallbackEnObj[field];
+    if (fallbackValue !== undefined && fallbackValue !== null && fallbackValue !== "") {
+      return fallbackValue;
+    }
+  }
+
+  // Shape B (field-level localization): { title: { en: "...", no: "..." } }
+  if (Object.prototype.hasOwnProperty.call(record, field)) {
+    return localizeData(record[field], locale);
+  }
+
+  return undefined;
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyPluginHandlebars);
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
@@ -67,8 +104,10 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("published_books", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/content/books/*.md").sort((a, b) => {
-      const yearA = Number.parseInt(a.data.publication_year, 10);
-      const yearB = Number.parseInt(b.data.publication_year, 10);
+      const yearAValue = getLocalizedField(a.data, "publication_year", "en");
+      const yearBValue = getLocalizedField(b.data, "publication_year", "en");
+      const yearA = Number.parseInt(yearAValue, 10);
+      const yearB = Number.parseInt(yearBValue, 10);
       const safeYearA = Number.isNaN(yearA) ? Number.MAX_SAFE_INTEGER : yearA;
       const safeYearB = Number.isNaN(yearB) ? Number.MAX_SAFE_INTEGER : yearB;
       return safeYearA - safeYearB;
@@ -101,6 +140,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("gt", (a, b) => Number(a) > Number(b));
   eleventyConfig.addFilter("eq", (a, b) => a === b);
   eleventyConfig.addFilter("localize", (value, lang) => localizeData(value, lang));
+  eleventyConfig.addFilter("lfield", (record, field, lang) =>
+    getLocalizedField(record, field, lang)
+  );
+  eleventyConfig.addFilter("localizedUrl", (url, lang) => {
+    const locale = typeof lang === "string" && lang ? lang : "en";
+    const value = typeof url === "string" ? url : "";
+    if (!value.startsWith("/")) return value;
+    if (locale !== "no") return value;
+    if (value === "/no" || value.startsWith("/no/")) return value;
+    return `/no${value}`;
+  });
   eleventyConfig.addFilter("t", (key, lang, i18n) => {
     const locale = typeof lang === "string" && lang ? lang : "en";
     const dict = i18n && typeof i18n === "object" ? i18n : {};

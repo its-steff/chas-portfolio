@@ -6,10 +6,10 @@ page_class: work-entry
 <section class="hero-section">
   <div class="layout-container">
     <div class="hero-content">
-      <h1>{{ localize title lang }}</h1>
-      <h2>{{ localize subtitle lang }}</h2>
-      {{#if (localize summary lang)}}
-      <p>{{ localize summary lang }}</p>
+      <h1>{{ lfield this 'title' lang }}</h1>
+      <h2>{{ lfield this 'subtitle' lang }}</h2>
+      {{#if (lfield this 'summary' lang)}}
+      <p>{{ lfield this 'summary' lang }}</p>
       {{/if}}
     </div>
     {{> components/decorative-divider/decorative-divider}}
@@ -20,10 +20,13 @@ page_class: work-entry
   <div class="layout-container">
     <div class="work-entry-image-shell">
       <div class="work-entry-image-frame">
-        {{#if (localize cover_image lang)}}
-        <img src="{{ localize cover_image lang }}" alt="{{ localize title lang }}" />
-        {{else}} {{#if (localize illustration_image lang)}}
-        <img src="{{ localize illustration_image lang }}" alt="{{ localize title lang }}" />
+        {{#if (lfield this 'cover_image' lang)}}
+        <img src="{{ lfield this 'cover_image' lang }}" alt="{{ lfield this 'title' lang }}" />
+        {{else}} {{#if (lfield this 'illustration_image' lang)}}
+        <img
+          src="{{ lfield this 'illustration_image' lang }}"
+          alt="{{ lfield this 'title' lang }}"
+        />
         {{/if}} {{/if}}
       </div>
     </div>
@@ -32,7 +35,7 @@ page_class: work-entry
 
 <section class="about-section">
   <div class="layout-container">
-    {{#if (localize body lang)}} {{> components/about-card/about-card body=(localize body lang)}}
-    {{else}} {{> components/about-card/about-card body=content}} {{/if}}
+    {{#if (lfield this 'body' lang)}} {{> components/about-card/about-card body=(lfield this 'body'
+    lang)}} {{else}} {{> components/about-card/about-card body=content}} {{/if}}
   </div>
 </section>
