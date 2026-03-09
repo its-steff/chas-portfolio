@@ -84,7 +84,18 @@ module.exports = function (eleventyConfig) {
       return new Date(b.data.date) - new Date(a.data.date);
     });
   });
+  eleventyConfig.addCollection("illustrations", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/illustrations/*.md").sort((a, b) => {
+      const dateA = new Date(a.data.published_date || a.data.date || 0).getTime();
+      const dateB = new Date(b.data.published_date || b.data.date || 0).getTime();
+      return dateB - dateA;
+    });
+  });
   eleventyConfig.addFilter("take", (arr, count) => (Array.isArray(arr) ? arr.slice(0, count) : []));
+  eleventyConfig.addFilter("concat", (a, b) => [
+    ...(Array.isArray(a) ? a : []),
+    ...(Array.isArray(b) ? b : []),
+  ]);
   eleventyConfig.addFilter("count", (arr) => (Array.isArray(arr) ? arr.length : 0));
   eleventyConfig.addFilter("gt", (a, b) => Number(a) > Number(b));
   eleventyConfig.addFilter("eq", (a, b) => a === b);

@@ -2,9 +2,11 @@
   <div class="book-card__media">
     {{#if book.cover_image}}
     <img src="{{ book.cover_image }}" alt="{{ book.title }}" />
+    {{else}} {{#if book.illustration_image}}
+    <img src="{{ book.illustration_image }}" alt="{{ book.title }}" />
     {{else}}
     <div class="book-card__fallback">{{> icons/book-open class="icon-md"}}</div>
-    {{/if}}
+    {{/if}} {{/if}}
   </div>
   <div class="book-card__header">
     {{#if book.title}}

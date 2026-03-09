@@ -1,6 +1,7 @@
 common:
   contact: "Contact"
   read_more: "Read More"
+  view_more: "View More"
   toggle_language: "Toggle language"
   open_menu: "Open menu"
 

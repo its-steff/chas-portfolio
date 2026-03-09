@@ -1,6 +1,10 @@
 en:
   title: The Portfolio
   intro: "Browse illustrations and published books "
+  books_section_title: Published Books
+  illustrations_section_title: Illustrations
 no:
   title: Portefølje
   intro: Se gjennom illustrasjoner og publiserte bøker
+  books_section_title: Publiserte bøker
+  illustrations_section_title: Illustrasjoner

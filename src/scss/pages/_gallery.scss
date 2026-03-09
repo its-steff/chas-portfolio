@@ -23,4 +23,53 @@
       align-items: center;
     }
   }
+
+  .gallery-section {
+    padding-block: 3rem;
+    background: $secondarySectionBackground;
+  }
+
+  .books-grid-gallery {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media (min-width: 640px) {
+    .books-grid-gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .books-grid-gallery {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .gallery-item.is-hidden {
+    display: none;
+  }
+
+  .gallery-view-more {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.25rem 1rem;
+    border: 1px solid rgba(20, 184, 166, 0.35);
+    border-radius: 8px;
+    color: $ink;
+    background: transparent;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      background 160ms ease,
+      border-color 160ms ease;
+  }
+
+  .gallery-view-more:hover {
+    background: rgba(20, 184, 166, 0.08);
+    border-color: rgba(20, 184, 166, 0.55);
+  }
 }

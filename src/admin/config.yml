@@ -58,6 +58,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
           - { label: "Intro", name: "intro", widget: "text", i18n: true }
+          - {
+              label: "Books Section Title",
+              name: "books_section_title",
+              widget: "string",
+              i18n: true,
+            }
+          - {
+              label: "Illustrations Section Title",
+              name: "illustrations_section_title",
+              widget: "string",
+              i18n: true,
+            }
       - label: "Home Page"
         name: "home_page"
         file: "src/_data/home.yml"

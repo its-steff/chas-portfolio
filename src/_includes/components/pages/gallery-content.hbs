@@ -9,12 +9,26 @@
 </section>
 
 <section class="gallery-section">
-  <div class="layout-section">
-    <div class="gallery">
-      {{#each (take @root.collections.published_books 4)}} {{> components/book-card/book-card
-        book=this.data book_url=this.url}} {{/each}}
-
+  <div class="layout-container">
+    {{#with (concat @root.collections.published_books @root.collections.illustrations) as
+    |gallery_items|}}
+    <div class="books-grid books-grid-gallery">
+      {{#each gallery_items}}
+      <div class="gallery-item {{#if (gt @index 8)}}is-hidden{{/if}}" data-reveal-item="gallery">
+        {{> components/book-card/book-card book=this.data book_url=this.url}}
+      </div>
+      {{/each}}
     </div>
+    {{#if (gt (count gallery_items) 9)}}
+    <button
+      class="gallery-view-more"
+      type="button"
+      data-reveal-button="gallery"
+      data-reveal-step="3"
+    >
+      {{t "common.view_more" @root.lang @root.i18n}}
+    </button>
+    {{/if}} {{/with}}
   </div>
 </section>
 
