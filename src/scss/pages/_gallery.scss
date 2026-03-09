@@ -1,23 +1,26 @@
 @use "../tokens" as *;
 
-.gallery-hero-section {
-  border: 1px solid red;
+.gallery-page {
+  .hero-section {
+    border-bottom: 1px solid $line;
+    padding-bottom: 56px;
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
+      line-height: 1.05;
+      color: $ink;
+      font-family: $font-display;
+      font-weight: 500;
+    }
 
-  h1 {
-    margin: 0 0 1rem;
-    font-size: clamp(2.25rem, 6vw, 4.6rem);
-    line-height: 1.05;
-    color: $ink;
-    font-family: $font-display;
-    font-weight: 500;
+    p {
+      color: $muted;
+    }
+
+    .gallery-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
-
-  .layout-container {
-    border: 1px solid blue;
-  }
-}
-
-.gallery-hero {
-  display: flex;
-  color: red;
 }

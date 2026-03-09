@@ -1,9 +1,19 @@
 {{#with (localize gallery lang) as |gallery_data|}}
-<section class="gallery-hero-section">
+<section class="hero-section">
   <div class="layout-container">
     <div class="gallery-hero">
       <h1>{{ gallery_data.title }}</h1>
       <p>{{ gallery_data.intro }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="layout-section">
+    <div class="gallery">
+      {{#each (take @root.collections.published_books 4)}} {{> components/book-card/book-card
+        book=this.data book_url=this.url}} {{/each}}
+
     </div>
   </div>
 </section>
