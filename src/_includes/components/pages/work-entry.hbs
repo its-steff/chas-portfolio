@@ -10,17 +10,26 @@ page_class: work-entry
       <h2>{{ subtitle }}</h2>
       {{#if summary}}
       <p>{{ summary }}</p>
+      {{/if}}
     </div>
     {{> components/decorative-divider/decorative-divider}}
   </div>
 </section>
 
-<section>
+<section class="image-section">
   <div class="layout-container">
-    {{/if}} {{#if cover_image}}
-    <p><img src="{{ cover_image }}" alt="{{ title }}" /></p>
-    {{else}} {{#if illustration_image}}
-    <p><img src="{{ illustration_image }}" alt="{{ title }}" /></p>
-    {{/if}} {{/if}}
+    <div class="work-entry-image-shell">
+      <div class="work-entry-image-frame">
+        {{#if cover_image}}
+        <img src="{{ cover_image }}" alt="{{ title }}" />
+        {{else}} {{#if illustration_image}}
+        <img src="{{ illustration_image }}" alt="{{ title }}" />
+        {{/if}} {{/if}}
+      </div>
+    </div>
   </div>
+</section>
+
+<section class="about-section">
+  <div class="layout-container">{{> components/about-card/about-card body=content}}</div>
 </section>

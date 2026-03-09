@@ -1,0 +1,15 @@
+@use "../../../scss/tokens" as *;
+
+.about-card {
+  background-color: white;
+  padding: 56px;
+  margin: 56px auto 0 auto;
+  border-radius: 0.75rem;
+  border: 1px solid $line;
+  box-shadow: 0 24px 56px rgba(42, 37, 32, 0.2);
+  max-width: 50vw;
+
+  p {
+    color: $muted;
+  }
+}
