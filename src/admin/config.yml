@@ -114,6 +114,12 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "components/pages/work-entry.hbs",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
@@ -167,6 +173,12 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "components/pages/work-entry.hbs",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Illustration Image", name: "illustration_image", widget: "image" }
       - { label: "Summary", name: "summary", widget: "text" }

@@ -663,6 +663,24 @@
   border-color: rgba(20, 184, 166, 0.55);
 }
 
+.work-entry .hero-section .layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.work-entry .hero-section .layout-container h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
+  line-height: 1.05;
+  color: #2a2520;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+}
+.work-entry .hero-section .layout-container p {
+  color: #6b5d54;
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
 }

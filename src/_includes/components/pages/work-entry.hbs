@@ -1,0 +1,22 @@
+---
+layout: layouts/base.hbs
+page_class: work-entry
+---
+
+<section class="hero-section">
+  <div class="layout-container">
+    <h1>{{ title }}</h1>
+    <h2>{{ subtitle }}</h2>
+    {{#if summary}}
+    <p>{{ summary }}</p>
+  </div>
+</section>
+<section>
+  <div class="layout-container">
+    {{/if}} {{#if cover_image}}
+    <p><img src="{{ cover_image }}" alt="{{ title }}" /></p>
+    {{else}} {{#if illustration_image}}
+    <p><img src="{{ illustration_image }}" alt="{{ title }}" /></p>
+    {{/if}} {{/if}}
+  </div>
+</section>
