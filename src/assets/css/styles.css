@@ -217,7 +217,7 @@
   gap: 1.5rem;
 }
 
-.book-card {
+.work-card {
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -228,29 +228,29 @@
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
-.book-card:hover {
+.work-card:hover {
   border-color: rgba(20, 184, 166, 0.5);
   box-shadow: 0 12px 30px rgba(20, 184, 166, 0.12);
 }
 
-.book-card__media {
+.work-card__media {
   aspect-ratio: 3/4;
   overflow: hidden;
   background: rgba(20, 184, 166, 0.1);
 }
 
-.book-card__media img {
+.work-card__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 300ms ease;
 }
 
-.book-card:hover .book-card__media img {
+.work-card:hover .work-card__media img {
   transform: scale(1.08);
 }
 
-.book-card__fallback {
+.work-card__fallback {
   width: 100%;
   height: 100%;
   display: grid;
@@ -258,11 +258,11 @@
   color: #6b5d54;
 }
 
-.book-card__header {
+.work-card__header {
   padding: 1.1rem 1.25rem;
 }
 
-.book-card__header h3 {
+.work-card__header h3 {
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.1;
@@ -271,7 +271,7 @@
   color: #2a2520;
 }
 
-.book-card__empty {
+.work-card__empty {
   margin: 0;
   color: #6b5d54;
 }
@@ -622,7 +622,6 @@
 }
 .gallery-page .gallery-section {
   padding-block: 3rem;
-  background: #fbf6ef;
 }
 .gallery-page .books-grid-gallery {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -655,6 +654,9 @@
   font-weight: 500;
   cursor: pointer;
   transition: background 160ms ease, border-color 160ms ease;
+}
+.gallery-page .gallery-view-more[hidden] {
+  display: none !important;
 }
 .gallery-page .gallery-view-more:hover {
   background: rgba(20, 184, 166, 0.08);

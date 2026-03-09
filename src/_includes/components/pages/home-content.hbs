@@ -39,7 +39,7 @@
         </a>
       </div>
       <div class="books-grid">
-        {{#each (take @root.collections.published_books 4)}} {{> components/book-card/book-card
+        {{#each (take @root.collections.published_books 4)}} {{> components/work-card/work-card
         book=this.data book_url=this.url}} {{/each}}
       </div>
     </div>

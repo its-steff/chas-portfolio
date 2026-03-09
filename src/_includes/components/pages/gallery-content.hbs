@@ -15,7 +15,7 @@
     <div class="books-grid books-grid-gallery">
       {{#each gallery_items}}
       <div class="gallery-item {{#if (gt @index 8)}}is-hidden{{/if}}" data-reveal-item="gallery">
-        {{> components/book-card/book-card book=this.data book_url=this.url}}
+        {{> components/work-card/work-card book=this.data book_url=this.url}}
       </div>
       {{/each}}
     </div>

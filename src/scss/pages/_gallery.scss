@@ -26,7 +26,6 @@
 
   .gallery-section {
     padding-block: 3rem;
-    background: $secondarySectionBackground;
   }
 
   .books-grid-gallery {
@@ -66,6 +65,10 @@
     transition:
       background 160ms ease,
       border-color 160ms ease;
+  }
+
+  .gallery-view-more[hidden] {
+    display: none !important;
   }
 
   .gallery-view-more:hover {
