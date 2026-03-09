@@ -1,16 +1,22 @@
 <a class="work-card" href="{{ book_url }}">
   <div class="work-card__media">
-    {{#if book.cover_image}}
-    <img src="{{ book.cover_image }}" alt="{{ book.title }}" />
-    {{else}} {{#if book.illustration_image}}
-    <img src="{{ book.illustration_image }}" alt="{{ book.title }}" />
+    {{#if (localize book.cover_image @root.lang)}}
+    <img
+      src="{{ localize book.cover_image @root.lang }}"
+      alt="{{ localize book.title @root.lang }}"
+    />
+    {{else}} {{#if (localize book.illustration_image @root.lang)}}
+    <img
+      src="{{ localize book.illustration_image @root.lang }}"
+      alt="{{ localize book.title @root.lang }}"
+    />
     {{else}}
     <div class="work-card__fallback">{{> icons/book-open class="icon-md"}}</div>
     {{/if}} {{/if}}
   </div>
   <div class="work-card__header">
-    {{#if book.title}}
-    <h3>{{ book.title }}</h3>
+    {{#if (localize book.title @root.lang)}}
+    <h3>{{ localize book.title @root.lang }}</h3>
     {{else}}
     <p class="work-card__empty">No title available</p>
     {{/if}}

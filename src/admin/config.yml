@@ -108,6 +108,7 @@ collections:
   - name: "published_books"
     label: "Published Books"
     label_singular: "Book"
+    i18n: true
     folder: "src/content/books"
     create: true
     slug: "{{slug}}"
@@ -119,20 +120,34 @@ collections:
           name: "layout",
           widget: "hidden",
           default: "components/pages/work-entry.hbs",
+          i18n: duplicate,
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Store Link", name: "store_link", widget: "string", required: false }
-      - { label: "CTA Text", name: "cta_text", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
+      - {
+          label: "Cover Image",
+          name: "cover_image",
+          widget: "image",
+          required: false,
+          i18n: duplicate,
+        }
+      - { label: "Summary", name: "summary", widget: "text", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - {
+          label: "Store Link",
+          name: "store_link",
+          widget: "string",
+          required: false,
+          i18n: duplicate,
+        }
+      - { label: "CTA Text", name: "cta_text", widget: "string", i18n: true }
       - {
           label: "Publication Year",
           name: "publication_year",
           widget: "string",
           hint: "Use YYYY (example: 2024)",
           pattern: ["^[0-9]{4}$", "Please use a 4-digit year (YYYY)."],
+          i18n: duplicate,
         }
 
   - name: "events"
@@ -167,6 +182,7 @@ collections:
   - name: "illustrations"
     label: "Illustrations"
     label_singular: "Illustration"
+    i18n: true
     folder: "src/content/illustrations"
     create: true
     slug: "{{slug}}"
@@ -178,8 +194,14 @@ collections:
           name: "layout",
           widget: "hidden",
           default: "components/pages/work-entry.hbs",
+          i18n: duplicate,
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Illustration Image", name: "illustration_image", widget: "image" }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - {
+          label: "Illustration Image",
+          name: "illustration_image",
+          widget: "image",
+          i18n: duplicate,
+        }
+      - { label: "Summary", name: "summary", widget: "text", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
