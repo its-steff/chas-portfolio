@@ -10,7 +10,7 @@
 
 <section class="gallery-section">
   <div class="layout-container">
-    {{#with (concat @root.collections.published_books @root.collections.illustrations) as
+    {{#with (concat (reverse @root.collections.published_books) @root.collections.illustrations) as
     |gallery_items|}}
     <div class="books-grid books-grid-gallery">
       {{#each gallery_items}}

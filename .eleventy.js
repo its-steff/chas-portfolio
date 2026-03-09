@@ -92,6 +92,7 @@ module.exports = function (eleventyConfig) {
     });
   });
   eleventyConfig.addFilter("take", (arr, count) => (Array.isArray(arr) ? arr.slice(0, count) : []));
+  eleventyConfig.addFilter("reverse", (arr) => (Array.isArray(arr) ? [...arr].reverse() : []));
   eleventyConfig.addFilter("concat", (a, b) => [
     ...(Array.isArray(a) ? a : []),
     ...(Array.isArray(b) ? b : []),
