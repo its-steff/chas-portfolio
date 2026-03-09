@@ -53,3 +53,4 @@ You do need:
 ## Language switching and translations
 
 - See detailed guide: `docs/i18n.md`
+- New page checklist: `docs/new-page-setup.md`
