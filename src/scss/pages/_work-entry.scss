@@ -3,9 +3,11 @@
 .work-entry {
   .hero-section {
     .layout-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
       h1 {
         margin: 0 0 1rem;
@@ -14,6 +16,10 @@
         color: $ink;
         font-family: $font-display;
         font-weight: 500;
+      }
+
+      h2 {
+        font-size: 1.85rem;
       }
 
       p {

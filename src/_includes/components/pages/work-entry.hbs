@@ -5,12 +5,16 @@ page_class: work-entry
 
 <section class="hero-section">
   <div class="layout-container">
-    <h1>{{ title }}</h1>
-    <h2>{{ subtitle }}</h2>
-    {{#if summary}}
-    <p>{{ summary }}</p>
+    <div class="hero-content">
+      <h1>{{ title }}</h1>
+      <h2>{{ subtitle }}</h2>
+      {{#if summary}}
+      <p>{{ summary }}</p>
+    </div>
+    {{> components/decorative-divider/decorative-divider}}
   </div>
 </section>
+
 <section>
   <div class="layout-container">
     {{/if}} {{#if cover_image}}

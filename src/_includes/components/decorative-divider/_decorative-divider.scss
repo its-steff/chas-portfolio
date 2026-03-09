@@ -1,0 +1,37 @@
+@use "../../../scss/tokens" as *;
+
+.decorative-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+.decorative-divider__line {
+  flex: 1;
+  border-top: 1px solid $line;
+}
+
+.decorative-divider__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 0.25rem;
+  color: $primary;
+}
+
+.decorative-divider__icon {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.decorative-divider__icon--sm {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.decorative-divider__icon--md {
+  width: 1.5rem;
+  height: 1.5rem;
+}
