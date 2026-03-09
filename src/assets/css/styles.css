@@ -631,6 +631,26 @@
     gap: 2.75rem;
   }
 }
+.gallery-hero-section {
+  border: 1px solid red;
+}
+.gallery-hero-section h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  color: #2a2520;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+}
+.gallery-hero-section .layout-container {
+  border: 1px solid blue;
+}
+
+.gallery-hero {
+  display: flex;
+  color: red;
+}
+
 * {
   box-sizing: border-box;
 }
