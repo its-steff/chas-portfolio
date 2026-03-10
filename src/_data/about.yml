@@ -1,11 +1,77 @@
-title:
-  en: About
-  no: Om
-intro:
-  en: Learn more about Cha's creative journey.
-  no: Lær mer om Chas kreative reise.
-body:
-  en: |
-    This is the about page content. You can edit this in the CMS.
-  no: |
-    Dette er innholdet for om-siden. Du kan redigere dette i CMS.
+en:
+  skills_list:
+    - skill:
+        name: Skill one
+        description: Skill one description text here
+    - skill:
+        name: "Skill two "
+        description: "Skill two description text here "
+    - skill:
+        name: Skill three
+        description: Skill three description text here
+  title: "Meet Cha "
+  intro: >
+    Cha Sandmæl (1992) is a comic creator and illustrator living in Oslo,
+    Norway. «Eye of the Dragon» is their first published graphic novel,
+    published January 2021 with Egmont. Their books have been published in
+    Sweden and Denmark, and will also come out in France in 2024.
+  body: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum purus
+    id facilisis egestas. Nunc ullamcorper, ex eget accumsan dictum, nunc ligula
+    iaculis nunc, vel elementum felis est quis tortor. Fusce posuere non tortor
+    eu rutrum. Sed condimentum molestie nunc, at porta lectus molestie eget.
+    Proin consectetur, ipsum eget varius placerat, dui diam iaculis justo, ac
+    ultricies augue sapien a elit. Donec sit amet congue est. Proin sollicitudin
+    lacinia orci eget tincidunt. Morbi ut blandit magna. Mauris nec ex mauris.
+    Mauris porta elit id tellus egestas, sit amet fermentum sem iaculis. Integer
+    fermentum nisi hendrerit accumsan malesuada. Etiam tellus ipsum, eleifend eu
+    ante varius, placerat ultricies lorem. Aenean dictum mauris tellus, tempor
+    ultrices diam sodales non. Curabitur ac lobortis nibh. Aliquam erat
+    volutpat. Sed tempus, urna vel rutrum vulputate, tellus diam aliquam metus,
+    in venenatis tortor risus a eros.
+
+
+    Nulla dignissim dolor quis tempus pellentesque. Nulla facilisi. Aliquam leo lectus, varius nec nisi sit amet, gravida porttitor metus. Sed aliquet risus sed luctus bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ultrices sem. Quisque suscipit elit vitae eleifend ornare. Pellentesque mattis ex nibh. Nullam pharetra sollicitudin mauris, non ullamcorper nulla pulvinar vitae. Ut vel volutpat libero, cursus lobortis ante. Nunc condimentum eu dui a ultricies. Aliquam elit ipsum, gravida ut eros et, porta suscipit justo. Donec eu tortor eget nisl ullamcorper rutrum id vitae arcu. Duis egestas, nisi vitae sagittis cursus, ligula justo placerat enim, at imperdiet dolor sapien sit amet velit.
+  skills_title: Skills & Expertise
+  skills_subtext: A blend of traditional craftsmanship and modern techniques,
+    honed over years of dedicated practice.
+no:
+  body: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum purus
+    id facilisis egestas. Nunc ullamcorper, ex eget accumsan dictum, nunc ligula
+    iaculis nunc, vel elementum felis est quis tortor. Fusce posuere non tortor
+    eu rutrum. Sed condimentum molestie nunc, at porta lectus molestie eget.
+    Proin consectetur, ipsum eget varius placerat, dui diam iaculis justo, ac
+    ultricies augue sapien a elit. Donec sit amet congue est. Proin sollicitudin
+    lacinia orci eget tincidunt. Morbi ut blandit magna. Mauris nec ex mauris.
+    Mauris porta elit id tellus egestas, sit amet fermentum sem iaculis. Integer
+    fermentum nisi hendrerit accumsan malesuada. Etiam tellus ipsum, eleifend eu
+    ante varius, placerat ultricies lorem. Aenean dictum mauris tellus, tempor
+    ultrices diam sodales non. Curabitur ac lobortis nibh. Aliquam erat
+    volutpat. Sed tempus, urna vel rutrum vulputate, tellus diam aliquam metus,
+    in venenatis tortor risus a eros.
+
+
+    Nulla dignissim dolor quis tempus pellentesque. Nulla facilisi. Aliquam leo lectus, varius nec nisi sit amet, gravida porttitor metus. Sed aliquet risus sed luctus bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ultrices sem. Quisque suscipit elit vitae eleifend ornare. Pellentesque mattis ex nibh. Nullam pharetra sollicitudin mauris, non ullamcorper nulla pulvinar vitae. Ut vel volutpat libero, cursus lobortis ante. Nunc condimentum eu dui a ultricies. Aliquam elit ipsum, gravida ut eros et, porta suscipit justo. Donec eu tortor eget nisl ullamcorper rutrum id vitae arcu. Duis egestas, nisi vitae sagittis cursus, ligula justo placerat enim, at imperdiet dolor sapien sit amet velit.
+  intro: >
+    Cha Sandmæl (f.1992) er en serieskaper fra Oppegård. Hen har studert
+    billedkunst med fokus på illustrasjon fire år i Wales, men bor nå i Oslo.
+    Hen har laget tegneserier siden 2015, men Dragens Øye (2021, Egmont) er hens
+    første tegneserieroman.
+
+
+    Hen er også utdannet kunst og håndverkslærer (praktisk pedagogisk utdanning ved NTNU, 2019).
+  skills_title: Ferdigheter
+  skills_subtext: En blanding av tradisjonelt håndverk og moderne teknikker,
+    finslipt gjennom mange års dedikert praksis.
+  skills_list:
+    - skill:
+        name: Tegning
+        description: Kan tegne super bra
+    - skill:
+        name: Maling
+        description: Kan også male super bra
+    - skill:
+        name: Vitser
+        description: Har noe gode vitser
+  title: "Møt Cha "
