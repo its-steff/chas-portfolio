@@ -7,9 +7,18 @@
   border-radius: 0.75rem;
   border: 1px solid $line;
   box-shadow: 0 24px 56px rgba(42, 37, 32, 0.2);
-  max-width: 50vw;
+  max-width: 90vw;
 
-  p {
+  .body {
     color: $muted;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 900px) {
+    max-width: 60vw;
+  }
+
+  .link-button-container {
+    margin-top: 30px;
   }
 }

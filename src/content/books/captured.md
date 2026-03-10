@@ -10,13 +10,14 @@ en:
     The two friends must stand up for each other like never before, and a very special bond is created when they realize that one's curse can be controlled by the other.
   summary: The third book in the epic fantasy series for children and young adults
     about the ash elf Kha!
+  cta_link: https://www.norli.no/boker/barneboker/fra-10-ar/beseiret-9788234722356
   layout: components/pages/work-entry.hbs
   publication_year: "2023"
   cover_image: /assets/uploads/dragonseye3.jpeg
-  subtitle: The Dragon's Eye
+  subtitle: Dragens Øye
   store_link: https://www.norli.no/boker/barneboker/fra-10-ar/fanget-21
-  title: Captured
-  cta_text: See more
+  title: Fanget
+  cta_text: Purchase
 no:
   body: >-
     Askealven Kha og menneske-dragen Ranja er på jakt etter magien som kan
@@ -26,11 +27,12 @@ no:
 
     De to vennene må stille opp for hverandre som aldri før, og et helt spesielt bånd skapes idet de forstår at den enes forbannelse kan kontrolleres av den andre ...
   summary: Tredje bok i den episke bokserien for barn og unge om askealven Kha.
+  cta_link: https://www.norli.no/boker/barneboker/fra-10-ar/beseiret-9788234722356
   layout: components/pages/work-entry.hbs
   publication_year: "2023"
   cover_image: /assets/uploads/dragonseye3.jpeg
   subtitle: Dragens Øye
   store_link: https://www.norli.no/boker/barneboker/fra-10-ar/fanget-21
   title: Fanget
-  cta_text: Vis mer
+  cta_text: Kjøp her
 ---

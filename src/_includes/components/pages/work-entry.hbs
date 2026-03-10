@@ -36,6 +36,8 @@ page_class: work-entry
 <section class="about-section">
   <div class="layout-container">
     {{#if (lfield this 'body' lang)}} {{> components/about-card/about-card body=(lfield this 'body'
-    lang)}} {{else}} {{> components/about-card/about-card body=content}} {{/if}}
+    lang) cta_link=(lfield this 'cta_link' lang) cta_text=(lfield this 'cta_text' lang) }} {{else}}
+    {{> components/about-card/about-card body=content cta_link=(lfield this 'cta_link' lang)
+    cta_text=(lfield this 'cta_text' lang) }} {{/if}}
   </div>
 </section>

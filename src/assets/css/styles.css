@@ -248,6 +248,24 @@
   height: 1.5rem;
 }
 
+.link-button {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid #14b8a6;
+  color: #fff;
+  background: #14b8a6;
+  padding: 0.68rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.link-button:hover {
+  background: #119f90;
+}
+
 .books-grid {
   display: grid;
   gap: 1.5rem;
@@ -437,10 +455,19 @@
   border-radius: 0.75rem;
   border: 1px solid rgba(20, 184, 166, 0.2);
   box-shadow: 0 24px 56px rgba(42, 37, 32, 0.2);
-  max-width: 50vw;
+  max-width: 90vw;
 }
-.about-card p {
+.about-card .body {
   color: #6b5d54;
+  line-height: 1.4;
+}
+@media (min-width: 900px) {
+  .about-card {
+    max-width: 60vw;
+  }
+}
+.about-card .link-button-container {
+  margin-top: 30px;
 }
 
 .home-page .hero-section {

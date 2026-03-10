@@ -11,13 +11,14 @@ en:
     betrayed and betrayed elf?"
   summary: "Betrayed, failed and abandoned! With a dragon as the only salvation. A
     new epic book series for children and young adults. "
+  cta_link: https://www.norli.no/boker/barneboker/fra-10-ar/beseiret-9788234722356
   layout: components/pages/work-entry.hbs
   publication_year: "2021"
   cover_image: /assets/uploads/dragonseye1.jpg
-  subtitle: The Dragon's Eye
+  subtitle: Dragens Øye
   store_link: https://www.norli.no/boker/barneboker/fra-10-ar/dragens-oye
-  title: Betrayed
-  cta_text: See more
+  title: Forrådt
+  cta_text: Purchase
 no:
   body: "Hvordan starter man på nytt når man har mistet alt? Askealven Kha
     utmerker seg innen magi i en verden under bakken, der månen dyrkes og
@@ -29,11 +30,12 @@ no:
     hold: Men hva vil en drage med en forlatt, sviktet og forrådt alv?"
   summary: Forrådt, sviktet og forlatt! Med en drage som eneste redning. En ny
     besettende og episk bokserie for barn og ungdom.
+  cta_link: https://www.norli.no/boker/barneboker/fra-10-ar/beseiret-9788234722356
   layout: components/pages/work-entry.hbs
   publication_year: "2021"
   cover_image: /assets/uploads/dragonseye1.jpg
   subtitle: Dragens Øye
   store_link: https://www.norli.no/boker/barneboker/fra-10-ar/dragens-oye
   title: Forrådt
-  cta_text: Vis mer
+  cta_text: Kjøp her
 ---

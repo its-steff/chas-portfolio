@@ -1,0 +1,35 @@
+@use "../../../scss/tokens" as *;
+
+.link-button {
+  // display: inline-flex;
+  // align-items: center;
+  // justify-content: center;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid $primary;
+  color: #fff;
+  background: $primary;
+  padding: 0.68rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition:
+    background 150ms ease,
+    color 150ms ease,
+    border-color 150ms ease;
+}
+
+.link-button:hover {
+  background: #119f90;
+}
+
+// .link-button-outline {
+//   background: transparent;
+//   color: $ink;
+//   border-color: rgba(20, 184, 166, 0.35);
+// }
+
+// .link-button-outline:hover {
+//   background: rgba(20, 184, 166, 0.08);
+// }

@@ -10,13 +10,14 @@ en:
     Their attack comes suddenly and mercilessly, and our two heroes will really have to fight to get out of the fight alive!
   summary: "Second book in the epic book series for children and young adults
     about the ash elf Kha! "
+  cta_link: https://www.norli.no/boker/barneboker/fra-10-ar/beseiret-9788234722356
   layout: components/pages/work-entry.hbs
   publication_year: "2022"
   cover_image: /assets/uploads/dragonseye2.jpeg
-  subtitle: The Dragon's Eye
+  subtitle: Dragens Øye
   store_link: https://www.norli.no/boker/barneboker/fra-10-ar/angrepet-1
-  title: Attacked
-  cta_text: See more
+  title: Angrepet
+  cta_text: Purchase
 no:
   body: >-
     Askealven Kha har fått en venn og alliert i drage-mennesket Ranja. Sammen
@@ -27,11 +28,12 @@ no:
 
     Angrepet deres kommer brått og ubarmhjertig, og våre to helter må virkelig slå fra seg for å komme levende fra slagsmålet!
   summary: Andre bok i den episke bokserien for barn og ungdom om askealven Kha!
+  cta_link: https://www.norli.no/boker/barneboker/fra-10-ar/beseiret-9788234722356
   layout: components/pages/work-entry.hbs
   publication_year: "2022"
   cover_image: /assets/uploads/dragonseye2.jpeg
   subtitle: Dragens Øye
   store_link: https://www.norli.no/boker/barneboker/fra-10-ar/angrepet-1
   title: Angrepet
-  cta_text: Vis mer
+  cta_text: Kjøp her
 ---

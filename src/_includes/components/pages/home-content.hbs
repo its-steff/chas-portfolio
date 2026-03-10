@@ -7,7 +7,7 @@
         <h1>{{ home_data.hero_name }}</h1>
         <p class="intro">{{ home_data.intro }}</p>
         <div class="hero-actions">
-          <a class="cta-link" href="/gallery/">{{ home_data.cta_text }}</a>
+          {{> components/link-button/link-button href="/gallery/" text=home_data.cta_text}}
           <a class="cta-link cta-link-outline" href="/contact/"
             >{{t "common.contact" @root.lang @root.i18n}}</a
           >

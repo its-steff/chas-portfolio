@@ -1,5 +1,11 @@
 <div class="about-card">
   <h2>About this work</h2>
   {{> components/decorative-divider/decorative-divider}}
-  <div class="about-card__body">{{{body}}}</div>
+  <div class="body">{{{body}}}</div>
+
+  {{#if cta_link}} {{#if cta_text}}
+  <div class="link-button-container">
+    {{> components/link-button/link-button href=cta_link text=cta_text}}
+  </div>
+  {{/if}} {{/if}}
 </div>
