@@ -1,5 +1,12 @@
 const eleventyPluginHandlebars = require("@11ty/eleventy-plugin-handlebars");
+const markdownIt = require("markdown-it");
 const yaml = require("js-yaml");
+
+const md = markdownIt({
+  html: false,
+  breaks: false,
+  linkify: true,
+});
 
 function getByPath(obj, path) {
   return path.split(".").reduce((acc, segment) => {
@@ -177,6 +184,11 @@ module.exports = function (eleventyConfig) {
     })
       .format(date)
       .toUpperCase();
+  });
+
+  eleventyConfig.addFilter("md", (value) => {
+    if (value === undefined || value === null) return "";
+    return md.render(String(value));
   });
 
   return {
