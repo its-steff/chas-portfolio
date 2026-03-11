@@ -1,5 +1,17 @@
 @use "../tokens" as *;
 .about-page {
+  h2 {
+    font-size: clamp(1.75rem, 3.2vw, 2.25rem);
+    font-family: $font-display;
+    font-weight: 500;
+    color: $ink;
+  }
+
+  p {
+    color: $muted;
+    line-height: 1.7;
+  }
+
   .about-hero {
     border-bottom: 1px solid $line;
     background: linear-gradient(180deg, rgba(20, 184, 166, 0.08), rgba(253, 249, 243, 0));
@@ -24,8 +36,6 @@
   .about-hero__text p {
     margin: 0;
     max-width: 34rem;
-    color: $muted;
-    line-height: 1.7;
   }
 
   .about-hero__media {
@@ -67,13 +77,6 @@
     color: rgba(42, 37, 32, 0.32);
   }
 
-  @media (min-width: 900px) {
-    .about-hero__grid {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 3.5rem;
-    }
-  }
-
   .about-section {
     padding-block: 4rem;
   }
@@ -87,28 +90,15 @@
 
   .about-content h2 {
     margin: 0 0 1.5rem;
-    font-size: clamp(1.75rem, 3.2vw, 2.25rem);
-    font-family: $font-display;
-    font-weight: 500;
-    color: $ink;
   }
 
   .skills-section {
     background-color: #fbf6ef;
+  }
 
-    h2 {
-      text-align: center;
-      margin: 0 0 1rem;
-      font-size: clamp(1.85rem, 3.4vw, 2.5rem);
-      font-family: $font-display;
-      font-weight: 500;
-      color: $ink;
-    }
-
-    p {
-      color: $muted;
-      line-height: 1.7;
-    }
+  .skills-section h2 {
+    text-align: center;
+    margin: 0 0 1rem;
   }
 
   .skills-section .layout-container {
@@ -161,7 +151,7 @@
     transform: translateY(-2px);
   }
 
-  .skills-section__icon-wrap {
+  .skills-section__icon-container {
     width: 56px;
     height: 56px;
     border-radius: 12px;
@@ -190,6 +180,35 @@
   }
 
   @media (min-width: 900px) {
+  }
+
+  .contact-section {
+    border-top: 1px solid $line;
+    background: linear-gradient(180deg, rgba(20, 184, 166, 0.08), rgba(253, 249, 243, 0));
+    padding-block: clamp(3rem, 6vw, 5rem);
+  }
+
+  .contact-section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 56px;
+  }
+
+  .contact-section__content p {
+    max-width: 50rem;
+    text-align: center;
+    padding-bottom: 28px;
+    margin: 0;
+  }
+
+  @media (min-width: 900px) {
+    .about-hero__grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 3.5rem;
+    }
+
     .skills-section__card {
       max-width: 240px;
     }

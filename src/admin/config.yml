@@ -87,6 +87,9 @@ collections:
                   },
                 ],
             }
+          - { label: "Contact Title", name: "contact_title", widget: "string", i18n: true }
+          - { label: "Contact Subtext", name: "contact_subtext", widget: "string", i18n: true }
+        
 
       - label: "Gallery Page"
         name: "gallery_page"
