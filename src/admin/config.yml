@@ -76,6 +76,13 @@ collections:
                       [
                         { label: "Name", name: "name", widget: "string", i18n: true },
                         { label: "Description", name: "description", widget: "string", i18n: true },
+                        {
+                          label: "Icon Name",
+                          name: "icon_name",
+                          widget: "string",
+                          i18n: true,
+                          required: false,
+                        },
                       ],
                   },
                 ],

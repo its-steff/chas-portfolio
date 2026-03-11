@@ -17,9 +17,28 @@
     </div>
   </div>
 </section>
-<section class="about-story">
+
+<section class="about-section">
   <div class="layout-container">
     <div class="about-content">{{{ md about_data.body }}}</div>
+  </div>
+</section>
+
+<section class="skills-section">
+  <div class="layout-container">
+    <div class="skills-section__text">
+      <h2>{{ about_data.skills_title }}</h2>
+      <p>{{ about_data.skills_subtext }}</p>
+    </div>
+    <div class="skills-section__card-container">
+      {{#each about_data.skills_list}}
+      <div class="skills-section__card">
+        {{> icons{{ this.icon_name }} class="skills-section__icon" }}
+        <h3>{{ this.skill.name }}</h3>
+        <spa>{{this.skill.description}}</spa>
+      </div>
+      {{/each}}
+    </div>
   </div>
 </section>
 
