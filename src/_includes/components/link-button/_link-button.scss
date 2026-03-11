@@ -24,12 +24,12 @@
   background: #119f90;
 }
 
-// .link-button-outline {
-//   background: transparent;
-//   color: $ink;
-//   border-color: rgba(20, 184, 166, 0.35);
-// }
+.link-button--outline {
+  background: transparent;
+  color: $ink;
+  border-color: rgba(20, 184, 166, 0.35);
+}
 
-// .link-button-outline:hover {
-//   background: rgba(20, 184, 166, 0.08);
-// }
+.link-button--outline:hover {
+  background: rgba(20, 184, 166, 0.08);
+}
