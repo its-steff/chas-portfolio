@@ -863,14 +863,16 @@
 }
 .about-page .skills-section__card-container {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   max-width: 1100px;
   margin-inline: auto;
   justify-content: center;
 }
 .about-page .skills-section__card {
+  flex: 1 1 220px;
+  max-width: 260px;
   background-color: #ffffff;
   border: 1px solid rgba(20, 184, 166, 0.2);
   border-radius: 16px;
@@ -911,9 +913,9 @@
   color: #6b5d54;
   line-height: 1.6;
 }
-@media (min-width: 720px) {
-  .about-page .skills-section__card-container {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+@media (min-width: 900px) {
+  .about-page .skills-section__card {
+    max-width: 240px;
   }
 }
 
