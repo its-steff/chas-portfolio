@@ -3,12 +3,15 @@ en:
     - skill:
         name: Skill one
         description: Skill one description text here
+        icon_name: feather
     - skill:
         name: "Skill two "
         description: "Skill two description text here "
+        icon_name: palette
     - skill:
         name: Skill three
         description: Skill three description text here
+        icon_name: book-open
   title: "Meet Cha "
   intro: >
     Cha Sandmæl (1992) is a comic creator and illustrator living in Oslo,
@@ -51,11 +54,14 @@ no:
     - skill:
         name: Tegning
         description: Kan tegne super bra
+        icon_name: feather
     - skill:
         name: Maling
         description: Kan også male super bra
+        icon_name: palette
     - skill:
         name: Vitser
         description: Har noe gode vitser
+        icon_name: book-open
   title: "Møt Cha "
   hero_image: /assets/uploads/aboutchaimage.jpg

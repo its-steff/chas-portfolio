@@ -186,6 +186,17 @@ module.exports = function (eleventyConfig) {
       .toUpperCase();
   });
 
+  const iconMap = {
+    feather: "icons/feather",
+    palette: "icons/palette",
+    "book-open": "icons/book-open",
+  };
+
+  eleventyConfig.addFilter("iconPartial", (name) => {
+    if (!name) return null;
+    return iconMap[name] || null;
+  });
+
   eleventyConfig.addFilter("md", (value) => {
     if (value === undefined || value === null) return "";
     return md.render(String(value));
