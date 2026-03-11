@@ -132,13 +132,6 @@
     color: rgba(42, 37, 32, 0.32);
   }
 
-  @media (min-width: 900px) {
-    .hero {
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
-    }
-  }
-
   .gallery {
     display: grid;
     gap: 1.5rem;
@@ -152,13 +145,8 @@
     gap: 1rem;
   }
 
-  .gallery-head h2 {
-    font-size: 1.85rem;
-  }
-
   .gallery-head p {
     margin: 0;
-    color: $muted;
     max-width: 52rem;
   }
 
@@ -205,7 +193,6 @@
 
   .feed-heading h2 {
     margin: 0;
-    font-size: clamp(1.35rem, 2.6vw, 2rem);
   }
 
   .feed-heading .icon-svg {
@@ -241,6 +228,11 @@
   }
 
   @media (min-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+
     .home-feed-grid {
       grid-template-columns: 1fr 1fr;
       gap: 2.75rem;

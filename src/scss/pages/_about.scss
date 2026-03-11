@@ -1,17 +1,5 @@
 @use "../tokens" as *;
 .about-page {
-  h2 {
-    font-size: clamp(1.75rem, 3.2vw, 2.25rem);
-    font-family: $font-display;
-    font-weight: 500;
-    color: $ink;
-  }
-
-  p {
-    color: $muted;
-    line-height: 1.7;
-  }
-
   .about-hero {
     border-bottom: 1px solid $line;
     background: linear-gradient(180deg, rgba(20, 184, 166, 0.08), rgba(253, 249, 243, 0));

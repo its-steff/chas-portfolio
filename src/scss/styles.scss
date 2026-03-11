@@ -29,13 +29,16 @@ body {
 p {
   margin: 0 0 1rem;
   font-size: clamp(1rem, 1.9vw, 1.22rem);
+  color: $muted;
+  line-height: 1.7;
 }
 
 h2 {
   margin: 0 0 1rem;
-  font-size: clamp(1.45rem, 3.2vw, 2rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem);
   font-family: $font-display;
   font-weight: 500;
+  color: $ink;
 }
 
 .page-placeholder h1 {

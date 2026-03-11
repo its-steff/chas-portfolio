@@ -596,12 +596,6 @@
   height: 3rem;
   color: rgba(42, 37, 32, 0.32);
 }
-@media (min-width: 900px) {
-  .home-page .hero {
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
-  }
-}
 .home-page .gallery {
   display: grid;
   gap: 1.5rem;
@@ -613,12 +607,8 @@
   align-items: flex-start;
   gap: 1rem;
 }
-.home-page .gallery-head h2 {
-  font-size: 1.85rem;
-}
 .home-page .gallery-head p {
   margin: 0;
-  color: #6b5d54;
   max-width: 52rem;
 }
 .home-page .gallery-view-all {
@@ -657,7 +647,6 @@
 }
 .home-page .feed-heading h2 {
   margin: 0;
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
 }
 .home-page .feed-heading .icon-svg {
   color: #14b8a6;
@@ -685,6 +674,10 @@
   border-color: rgba(20, 184, 166, 0.5);
 }
 @media (min-width: 900px) {
+  .home-page .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+  }
   .home-page .home-feed-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.75rem;
@@ -754,16 +747,6 @@
   border-color: rgba(20, 184, 166, 0.55);
 }
 
-.about-page h2 {
-  font-size: clamp(1.75rem, 3.2vw, 2.25rem);
-  font-family: "Cinzel", serif;
-  font-weight: 500;
-  color: #2a2520;
-}
-.about-page p {
-  color: #6b5d54;
-  line-height: 1.7;
-}
 .about-page .about-hero {
   border-bottom: 1px solid rgba(20, 184, 166, 0.2);
   background: linear-gradient(180deg, rgba(20, 184, 166, 0.08), rgba(253, 249, 243, 0));
@@ -997,13 +980,16 @@ body {
 p {
   margin: 0 0 1rem;
   font-size: clamp(1rem, 1.9vw, 1.22rem);
+  color: #6b5d54;
+  line-height: 1.7;
 }
 
 h2 {
   margin: 0 0 1rem;
-  font-size: clamp(1.45rem, 3.2vw, 2rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem);
   font-family: "Cinzel", serif;
   font-weight: 500;
+  color: #2a2520;
 }
 
 .page-placeholder h1 {
