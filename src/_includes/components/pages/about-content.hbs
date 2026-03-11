@@ -1,15 +1,18 @@
 {{#with (localize about lang) as |about_data|}}
-<section class="hero-section">
+<section class="hero-section about-hero">
   <div class="layout-container">
-    <div class="hero-content">
-      <div class="text-content">
+    <div class="about-hero__grid">
+      <div class="about-hero__text">
         <h1>{{ about_data.title }}</h1>
         <p>{{ about_data.intro }}</p>
       </div>
-      <div class="media-content">
-        {{#if about_data.hero_image}}
-        <img src="{{ about_data.hero_image }}" alt="{{ about_data.title }}" />
-        {{else}} {{> icons/user class="hero-fallback-icon"}} {{/if}}
+      <div class="about-hero__media">
+        <div class="about-hero__glow"></div>
+        <div class="about-hero__frame">
+          {{#if about_data.hero_image}}
+          <img src="{{ about_data.hero_image }}" alt="{{ about_data.title }}" />
+          {{else}} {{> icons/user class="hero-fallback-icon"}} {{/if}}
+        </div>
       </div>
     </div>
   </div>
