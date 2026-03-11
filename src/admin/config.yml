@@ -89,8 +89,6 @@ collections:
             }
           - { label: "Contact Title", name: "contact_title", widget: "string", i18n: true }
           - { label: "Contact Subtext", name: "contact_subtext", widget: "string", i18n: true }
-        
-
       - label: "Gallery Page"
         name: "gallery_page"
         file: "src/_data/gallery.yml"
@@ -130,6 +128,36 @@ collections:
           - { label: "Gallery Intro", name: "gallery_intro", widget: "markdown", i18n: true }
           - { label: "Event Title", name: "event_title", widget: "string", i18n: true }
           - { label: "Blog Post Title", name: "blog_post_title", widget: "string", i18n: true }
+      - label: "Contact Page"
+        name: "contact_page"
+        file: "src/_data/contact.yml"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Subtext", name: "subtext", widget: "string", i18n: true }
+          - { label: "Email title", name: "email_title", widget: "string", i18n: true }
+          - { label: "Email address", name: "email_address", widget: "string", i18n: duplicate }
+          - { label: "Location title", name: "location_title", widget: "string", i18n: true }
+          - { label: "Location text", name: "location_text", widget: "string", i18n: true }
+          - { label: "Information title", name: "information_title", widget: "string", i18n: true }
+          - { label: "Information text", name: "information_text", widget: "string", i18n: true }
+          - {
+              label: "Frequently Asked Questions title",
+              name: "faq_title",
+              widget: "string",
+              i18n: true,
+            }
+          - {
+              label: "Frequently Asked Questions",
+              name: "faqs",
+              widget: "list",
+              i18n: true,
+              fields:
+                [
+                  { label: "Question", name: "question", widget: "string", i18n: true },
+                  { label: "Answer", name: "answer", widget: "markdown", i18n: true },
+                ],
+            }
 
   - name: "navigation_routes"
     label: "Navigation Routes"
