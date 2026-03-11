@@ -817,6 +817,25 @@
     gap: 3.5rem;
   }
 }
+.about-page .about-story {
+  padding-block: 4rem;
+}
+.about-page .about-content {
+  max-width: 48rem;
+  margin-inline: auto;
+  color: #6b5d54;
+  line-height: 1.7;
+}
+.about-page .about-content h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem);
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  color: #2a2520;
+}
+.about-page .about-content p {
+  margin: 0 0 1rem;
+}
 
 .work-entry .hero-section .layout-container .hero-content {
   display: flex;
