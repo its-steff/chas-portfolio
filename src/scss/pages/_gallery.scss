@@ -55,7 +55,7 @@
     justify-content: center;
     min-height: 2.75rem;
     padding: 0.25rem 1rem;
-    border: 1px solid rgba(20, 184, 166, 0.35);
+    border: 1px solid $primaryAlpha35;
     border-radius: 8px;
     color: $ink;
     background: transparent;
@@ -72,7 +72,7 @@
   }
 
   .gallery-view-more:hover {
-    background: rgba(20, 184, 166, 0.08);
-    border-color: rgba(20, 184, 166, 0.55);
+    background: $primaryAlpha08;
+    border-color: $primaryAlpha55;
   }
 }

@@ -60,7 +60,7 @@
 .desktop-nav a:hover,
 .mobile-nav-panel a:hover {
   color: $primary;
-  background: rgba(20, 184, 166, 0.08);
+  background: $primaryAlpha08;
 }
 
 .lang-toggle {
@@ -77,7 +77,7 @@
 }
 
 .lang-toggle:hover {
-  background: rgba(20, 184, 166, 0.08);
+  background: $primaryAlpha08;
 }
 
 .mobile-nav {

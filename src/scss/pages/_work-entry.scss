@@ -50,7 +50,7 @@
     overflow: hidden;
     border-radius: 0.75rem;
     background: $surface;
-    box-shadow: 0 24px 56px rgba(42, 37, 32, 0.2);
+    box-shadow: 0 24px 56px $inkAlpha20;
   }
 
   .work-entry-image-frame img {

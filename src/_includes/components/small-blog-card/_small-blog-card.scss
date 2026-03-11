@@ -2,7 +2,7 @@
 
 .small-blog-card {
   display: block;
-  border: 1px solid rgba(20, 184, 166, 0.3);
+  border: 1px solid $primaryAlpha30;
   border-radius: 12px;
   background: $surface;
   padding: 1rem 1.15rem;
@@ -14,8 +14,8 @@
 }
 
 .small-blog-card:hover {
-  border-color: rgba(20, 184, 166, 0.55);
-  box-shadow: 0 10px 24px rgba(20, 184, 166, 0.1);
+  border-color: $primaryAlpha55;
+  box-shadow: 0 10px 24px $primaryAlpha10;
   transform: translateY(-1px);
 }
 
