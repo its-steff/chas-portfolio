@@ -35,6 +35,7 @@ en:
   skills_title: Skills & Expertise
   skills_subtext: A blend of traditional craftsmanship and modern techniques,
     honed over years of dedicated practice.
+  hero_image: /assets/uploads/aboutchaimage.jpg
 no:
   body: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum purus
@@ -75,3 +76,4 @@ no:
         name: Vitser
         description: Har noe gode vitser
   title: "Møt Cha "
+  hero_image: /assets/uploads/aboutchaimage.jpg

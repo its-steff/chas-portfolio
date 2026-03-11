@@ -50,6 +50,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
           - { label: "Intro", name: "intro", widget: "text", i18n: true }
+          - {
+              label: "Hero Image",
+              name: "hero_image",
+              widget: "image",
+              required: false,
+              i18n: duplicate,
+            }
           - { label: "Body", name: "body", widget: "markdown", i18n: true }
           - { label: "Skills Title", name: "skills_title", widget: "string", i18n: true }
           - { label: "Skills Subtext", name: "skills_subtext", widget: "string", i18n: true }

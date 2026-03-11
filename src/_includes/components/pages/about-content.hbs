@@ -1,7 +1,20 @@
 {{#with (localize about lang) as |about_data|}}
-<section class="layout-container page-placeholder">
-  <h1>{{ about_data.title }}</h1>
-  <p>{{ about_data.intro }}</p>
-  <p>{{ about_data.body }}</p>
+<section class="hero-section">
+  <div class="layout-container">
+    <div class="hero-content">
+      <div class="text-content">
+        <h1>{{ about_data.title }}</h1>
+        <p>{{ about_data.intro }}</p>
+      </div>
+      <div class="media-content">
+        {{#if about_data.hero_image}}
+        <img src="{{ about_data.hero_image }}" alt="{{ about_data.title }}" />
+        {{else}} {{> icons/user class="hero-fallback-icon"}} {{/if}}
+      </div>
+    </div>
+  </div>
 </section>
-{{/with}}
+{{/with}} {{!--
+
+<p>{{ about_data.body }}</p>
+--}}
