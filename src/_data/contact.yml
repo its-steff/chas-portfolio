@@ -1,24 +1,30 @@
 en:
-  information_text: If am available for talks, drawing classes, and workshops.
-    Send an email if you are interested
+  information_text: I'm available for talks, workshops and drawing classes! Just get in touch!
   information_title: Booking Info
-  subtext: Have a project in mind? Questions about commissions? Or simply want to
-    share your thoughts on fantasy art? I'd love to hear from you.
+  subtext: Share your project idea or collaboration request, and I will respond soon.
   location_title: Location
   faq_title: Frequently Asked Questions
   email_address: cha@chaillustration.com
-  email_title: EMAIL
-  location_text: The Enchanted Studio Somewhere between reality and imagination
+  email_title: Email
+  location_text: Oslo, Norway
   title: Get in touch
+  faqs:
+    - question: What types of projects do you take on?
+      answer: Editorial illustration, book covers, and character design.
+    - question: What is your typical turnaround time?
+      answer: Most projects take 2–6 weeks depending on scope.
 no:
-  information_text: If am available for talks, drawing classes, and workshops.
-    Send an email if you are interested
+  information_text: I'm available for talks, workshops and drawing classes! Just get in touch!l.
   information_title: Booking Info
-  subtext: Have a project in mind? Questions about commissions? Or simply want to
-    share your thoughts on fantasy art? I'd love to hear from you.
+  subtext: Del prosjektideen din eller en samarbeidsforespørsel, så svarer jeg snart.
   location_title: Sted
-  faq_title: Frequently Asked Questions
+  faq_title: Ofte stilte spørsmål
   email_address: cha@chaillustration.com
-  email_title: EPOST
-  location_text: The Enchanted Studio Somewhere between reality and imagination
-  title: Ta kontact
+  email_title: E-post
+  location_text: Oslo, Norge
+  title: Ta kontakt
+  faqs:
+    - question: Hvilke typer prosjekter tar du på deg?
+      answer: Redaksjonell illustrasjon, bokomslag og karakterdesign.
+    - question: Hva er vanlig leveringstid?
+      answer: De fleste prosjekter tar 2–6 uker avhengig av omfang.

@@ -1,5 +1,13 @@
+{{#with (localize contact lang) as |contact_data|}}
+
 <section class="hero">
   <div class="layout-container">
-    <h1>This is the contact page</h1>
+    {{#if contact_data.title}}
+    <h1>{{contact_data.title}}</h1>
+    {{/if}} {{#if contact_data.subtext}}
+    <p>{{contact_data.subtext}}</p>
+    {{/if}}
   </div>
 </section>
+
+{{/with}}
