@@ -1,13 +1,34 @@
 {{#with (localize contact lang) as |contact_data|}}
-
-<section class="hero">
+<section class="hero-section">
   <div class="layout-container">
-    {{#if contact_data.title}}
-    <h1>{{contact_data.title}}</h1>
-    {{/if}} {{#if contact_data.subtext}}
-    <p>{{contact_data.subtext}}</p>
-    {{/if}}
+    <div class="hero-content">
+      {{#if contact_data.title}}
+      <h1>{{contact_data.title}}</h1>
+      {{/if}} {{#if contact_data.subtext}}
+      <p>{{contact_data.subtext}}</p>
+      {{/if}}
+    </div>
   </div>
 </section>
 
+<section class="information-section">
+  <div class="layout-container">
+    <div class="card-container">
+      <div class="card">
+        <span> {{> icons/mail class="icon-lg logo-mark"}} {{contact_data.email_title}}</span>
+        <a href="mailto:{{contact_data.email_address}}"> {{contact_data.email_address}}</a>
+      </div>
+
+      <div class="card">
+        <span>{{> icons/globe class="icon-lg logo-mark"}} {{contact_data.location_title}}</span>
+        <p>{{contact_data.location_text}}</p>
+      </div>
+
+      <div class="card">
+        <span>{{> icons/scroll class="icon-lg logo-mark"}} {{contact_data.information_title}}</span>
+        <p>{{contact_data.information_text}}</p>
+      </div>
+    </div>
+  </div>
+</section>
 {{/with}}

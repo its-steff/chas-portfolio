@@ -1,1 +1,66 @@
 @use "../tokens" as *;
+.contact-page {
+  .hero-section {
+    border-bottom: 1px solid $line;
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.35rem, 5vw, 3.5rem);
+      line-height: 1.05;
+      color: $ink;
+      font-family: $font-display;
+      font-weight: 500;
+    }
+
+    p {
+      max-width: 50rem;
+      text-align: center;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding-bottom: 56px;
+    }
+  }
+
+  .information-section {
+    margin: 56px 0;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    background-color: white;
+    padding: 32px;
+    border-radius: 6px;
+    border: 1px solid $line;
+    height: 325px;
+
+    span {
+      font-size: clamp(1.125rem, 1rem + 0.8vw, 1.25rem);
+      text-transform: uppercase;
+      font-family: $font-display;
+      color: $ink;
+      font-weight: 500;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

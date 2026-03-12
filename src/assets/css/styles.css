@@ -915,6 +915,61 @@
   }
 }
 
+.contact-page .hero-section {
+  border-bottom: 1px solid rgba(20, 184, 166, 0.2);
+}
+.contact-page .hero-section h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.35rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  color: #2a2520;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+}
+.contact-page .hero-section p {
+  max-width: 50rem;
+  text-align: center;
+}
+.contact-page .hero-section .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 56px;
+}
+.contact-page .information-section {
+  margin: 56px 0;
+}
+.contact-page .card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.contact-page .card {
+  background-color: white;
+  padding: 32px;
+  border-radius: 6px;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  height: 325px;
+}
+.contact-page .card span {
+  font-size: clamp(1.125rem, 1rem + 0.8vw, 1.25rem);
+  text-transform: uppercase;
+  font-family: "Cinzel", serif;
+  color: #2a2520;
+  font-weight: 500;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.contact-page .card a {
+  text-decoration: none;
+  color: #14b8a6;
+}
+.contact-page .card p {
+  font-size: 16px;
+}
+
 .work-entry .hero-section .layout-container .hero-content {
   display: flex;
   flex-direction: column;

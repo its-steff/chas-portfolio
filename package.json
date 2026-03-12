@@ -4,20 +4,22 @@
   "scripts": {
     "clean": "rm -rf _site",
     "build:css": "sass src/scss/styles.scss src/assets/css/styles.css --no-source-map",
-    "watch:css": "chokidar \"src/scss/**/*.scss\" \"src/_includes/components/**/*.scss\" -c \"npm run build:css\"",
+    "watch:css": "chokidar \"src/scss/**/*.scss\" \"src/_includes/components/**/*.scss\" -c \"npm run build:css && cp -f src/assets/css/styles.css _site/assets/css/styles.css\"",
     "build:site": "eleventy",
-    "serve:site": "eleventy --serve",
+    "watch:site": "chokidar \"src/**/*.hbs\" \"src/_data/**/*.{yml,yaml}\" \"src/content/**/*.{md,yml,yaml}\" -c \"npm run build:site\"",
+    "serve:reload": "browser-sync start --server _site --files \"_site/**/*\" --no-open --no-notify --port 8080",
     "cms:proxy": "decap-server",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "build": "npm run clean && npm run build:css && npm run build:site",
-    "dev": "run-s build:css && run-p watch:css serve:site cms:proxy"
+    "dev": "run-s build:css build:site && run-p watch:css watch:site serve:reload cms:proxy"
   },
   "license": "ISC",
   "description": "Portfolio site for a comic book writer and illustrator, built with Eleventy + SCSS + Handlebars.",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-handlebars": "^1.0.0",
+    "browser-sync": "^3.0.4",
     "chokidar-cli": "^3.0.0",
     "decap-server": "^3.5.2",
     "handlebars": "^4.7.8",
