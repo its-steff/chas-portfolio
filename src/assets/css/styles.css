@@ -975,13 +975,81 @@
   margin: 0;
 }
 .contact-page .faq-section {
-  background-color: #faf6ef;
-  padding: 56px 0;
+  padding-block: 64px;
+  background-color: #fbf6ef;
 }
 .contact-page .faq-content {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+.contact-page .faq-content h2 {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: clamp(1.75rem, 2vw + 1rem, 2.4rem);
+  font-family: "Cinzel", serif;
+  color: #2a2520;
+}
+.contact-page .faq-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  border-radius: 14px;
+  padding: 12px 20px;
+  width: 100%;
+}
+.contact-page .faq-accordion {
+  display: grid;
+}
+.contact-page .faq-item {
+  border-bottom: 1px solid rgba(20, 184, 166, 0.2);
+  padding: 6px 0;
+}
+.contact-page .faq-item:last-child {
+  border-bottom: none;
+}
+.contact-page .faq-trigger {
+  list-style: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #2a2520;
+  font-family: "Cinzel", serif;
+}
+.contact-page .faq-trigger::-webkit-details-marker {
+  display: none;
+}
+.contact-page .faq-icon {
+  width: 18px;
+  height: 18px;
+  color: #6b5d54;
+  transition: transform 200ms ease;
+  flex-shrink: 0;
+}
+.contact-page .faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+}
+.contact-page .faq-panel {
+  padding: 0 0 14px;
+  color: #6b5d54;
+  line-height: 1.6;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  overflow: hidden;
+  transition: max-height 240ms ease, opacity 220ms ease, transform 220ms ease;
+}
+.contact-page .faq-panel p {
+  margin: 0;
+  font-size: 16px;
+}
+.contact-page .faq-item[open] .faq-panel {
+  max-height: 320px;
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 720px) {
   .contact-page .card-container {
@@ -989,6 +1057,9 @@
   }
   .contact-page .card {
     padding: 24px;
+  }
+  .contact-page .faq-card {
+    padding: 10px 16px;
   }
 }
 

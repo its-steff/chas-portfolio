@@ -36,6 +36,21 @@
   <div class="layout-container">
     <div class="faq-content">
       <h2>{{contact_data.faq_title}}</h2>
+      {{#if contact_data.faqs}}
+      <div class="faq-card">
+        <div class="faq-accordion" data-accordion="single">
+          {{#each contact_data.faqs}}
+          <details class="faq-item" data-accordion-item>
+            <summary class="faq-trigger">
+              <span>{{this.question}}</span>
+              {{> icons/chevron-down class="faq-icon"}}
+            </summary>
+            <div class="faq-panel">{{{ md this.answer }}}</div>
+          </details>
+          {{/each}}
+        </div>
+      </div>
+      {{/if}}
     </div>
   </div>
 </section>
