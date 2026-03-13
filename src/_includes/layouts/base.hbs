@@ -16,7 +16,9 @@
     <div class="site-shell">
       {{> components/nav/nav}}
 
-      <main class="page-main {{page_class}}{{#if (eq page_class 'about-page')}} secondary{{/if}}">
+      <main
+        class="page-main {{page_class}}{{#if (or (eq page_class 'about-page') (eq page_class 'contact-page'))}} secondary{{/if}}"
+      >
         {{{ content }}}
       </main>
 

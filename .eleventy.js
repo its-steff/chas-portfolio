@@ -146,6 +146,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("count", (arr) => (Array.isArray(arr) ? arr.length : 0));
   eleventyConfig.addFilter("gt", (a, b) => Number(a) > Number(b));
   eleventyConfig.addFilter("eq", (a, b) => a === b);
+  eleventyConfig.addFilter("or", (a, b) => Boolean(a || b));
   eleventyConfig.addFilter("localize", (value, lang) => localizeData(value, lang));
   eleventyConfig.addFilter("lfield", (record, field, lang) =>
     getLocalizedField(record, field, lang)
