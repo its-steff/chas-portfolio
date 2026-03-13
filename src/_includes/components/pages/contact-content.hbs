@@ -40,13 +40,27 @@
       <div class="faq-card">
         <div class="faq-accordion" data-accordion="single">
           {{#each contact_data.faqs}}
-          <details class="faq-item" data-accordion-item>
-            <summary class="faq-trigger">
+          <div class="faq-item" data-accordion-item>
+            <button
+              class="faq-trigger"
+              type="button"
+              id="faq-trigger-{{@index}}"
+              aria-controls="faq-panel-{{@index}}"
+              aria-expanded="false"
+            >
               <span>{{this.question}}</span>
               {{> icons/chevron-down class="faq-icon"}}
-            </summary>
-            <div class="faq-panel">{{{ md this.answer }}}</div>
-          </details>
+            </button>
+            <div
+              class="faq-panel"
+              id="faq-panel-{{@index}}"
+              role="region"
+              aria-labelledby="faq-trigger-{{@index}}"
+              aria-hidden="true"
+            >
+              <div class="faq-panel__inner">{{{ md this.answer }}}</div>
+            </div>
+          </div>
           {{/each}}
         </div>
       </div>

@@ -1007,7 +1007,10 @@
   border-bottom: none;
 }
 .contact-page .faq-trigger {
-  list-style: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1019,35 +1022,39 @@
   color: #2a2520;
   font-family: "Cinzel", serif;
 }
-.contact-page .faq-trigger::-webkit-details-marker {
-  display: none;
+.contact-page .faq-trigger:focus-visible {
+  outline: 2px solid #14b8a6;
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 .contact-page .faq-icon {
   width: 18px;
   height: 18px;
   color: #6b5d54;
-  transition: transform 200ms ease;
+  transition: transform 260ms ease;
   flex-shrink: 0;
 }
-.contact-page .faq-item[open] .faq-icon {
+.contact-page .faq-item.is-open .faq-icon {
   transform: rotate(180deg);
 }
 .contact-page .faq-panel {
-  padding: 0 0 14px;
-  color: #6b5d54;
-  line-height: 1.6;
   max-height: 0;
   opacity: 0;
   transform: translateY(-4px);
   overflow: hidden;
-  transition: max-height 240ms ease, opacity 220ms ease, transform 220ms ease;
+  transition: max-height 520ms ease, opacity 360ms ease, transform 360ms ease;
 }
-.contact-page .faq-panel p {
+.contact-page .faq-panel__inner {
+  padding: 0 0 14px;
+  color: #6b5d54;
+  line-height: 1.6;
+}
+.contact-page .faq-panel__inner p {
   margin: 0;
   font-size: 16px;
 }
-.contact-page .faq-item[open] .faq-panel {
-  max-height: 320px;
+.contact-page .faq-item.is-open .faq-panel {
+  max-height: 600px;
   opacity: 1;
   transform: translateY(0);
 }
