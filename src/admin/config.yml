@@ -160,7 +160,7 @@ collections:
             }
       - label: "EventPage"
         name: "event_page"
-        file: "src/_data/events.yml"
+        file: "src/_data/eventpage.yml"
         i18n: true
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
