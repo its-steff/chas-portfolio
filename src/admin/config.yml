@@ -158,6 +158,22 @@ collections:
                   { label: "Answer", name: "answer", widget: "markdown", i18n: true },
                 ],
             }
+      - label: "EventPage"
+        name: "event_page"
+        file: "src/_data/events.yml"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Subtext", name: "subtext", widget: "string", i18n: true }
+          - {
+              label: "Upcoming Events Title",
+              name: "upcoming_events_title",
+              widget: string,
+              i18n: true,
+            }
+          - { label: "CTA title", name: "cta_title", widget: "string", i18n: true }
+          - { label: "CTA text", name: "cta_text", widget: "string", i18n: true }
+          - { label: "CTA button text", name: "cta_button_text", widget: "string", i18n:true }
 
   - name: "navigation_routes"
     label: "Navigation Routes"
@@ -221,6 +237,7 @@ collections:
 
   - name: "events"
     label: "Events"
+    i18n: true
     label_singular: "Event"
     folder: "src/content/events"
     create: true
@@ -228,11 +245,21 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+          i18n: duplicate,
+        }
+
+      - { label: "Location", name: "location", widget: "string", i18n: true }
+      - { label: "Summary", name: "summary", widget: "text", i18n: true }
+      - { label: "CTA link text", name: "cta_link_text", widget: "string", i18n: true }
+      - { label: "Event link", name: "event_link", widget: "string", i18n: duplicate }
+      - { label: "Event type", name: "event_type", widget: "string", i18n: true }
 
   - name: "blog_posts"
     label: "Blog Posts"

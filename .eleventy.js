@@ -168,18 +168,22 @@ module.exports = function (eleventyConfig) {
     if (fallback !== undefined && fallback !== null && fallback !== "") return fallback;
     return key;
   });
-  eleventyConfig.addFilter("eventDay", (value) => {
+  eleventyConfig.addFilter("eventDay", (value, lang) => {
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return "";
-    return new Intl.DateTimeFormat("en-US", {
+    const locale = typeof lang === "string" && lang ? lang : "en";
+    const localeMap = { en: "en-US", no: "nb-NO" };
+    return new Intl.DateTimeFormat(localeMap[locale] || "en-US", {
       day: "2-digit",
       timeZone: "UTC",
     }).format(date);
   });
-  eleventyConfig.addFilter("eventMonth", (value) => {
+  eleventyConfig.addFilter("eventMonth", (value, lang) => {
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return "";
-    return new Intl.DateTimeFormat("en-US", {
+    const locale = typeof lang === "string" && lang ? lang : "en";
+    const localeMap = { en: "en-US", no: "nb-NO" };
+    return new Intl.DateTimeFormat(localeMap[locale] || "en-US", {
       month: "short",
       timeZone: "UTC",
     })
