@@ -23,4 +23,12 @@
   </div>
 </section>
 
+<section class="cta-section">
+  <div class="layout-container">
+    <h2>{{eventpage_data.cta_title}}</h2>
+    <p>{{eventpage_data.cta_text}}</p>
+    {{> components/link-button/link-button href="/" text=eventpage_data.cta_button_text}}
+  </div>
+</section>
+
 {{/with}}
