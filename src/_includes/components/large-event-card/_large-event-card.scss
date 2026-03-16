@@ -1,0 +1,71 @@
+@use "../../../scss/tokens" as *;
+
+.large-event-card {
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 22px;
+
+  .event-type-tag {
+    background-color: rgba(20, 184, 165, 0.208);
+    color: $primaryStrong;
+    padding: 6px;
+    font-size: 13px;
+    border-radius: 6px;
+    width: fit-content;
+  }
+
+  h3 {
+    padding-top: 18px;
+    padding-bottom: 22px;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: $font-display;
+    font-weight: 500;
+    color: $ink;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $muted;
+  }
+
+  .details-container .details {
+    color: $muted;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 24px;
+
+    span {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    svg {
+      color: $primary;
+    }
+  }
+
+  .details-container .fake-button {
+    background-color: $primary;
+    color: $white;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: 1px solid $primary;
+    padding: 0.68rem 1.2rem;
+    margin-top: 24px;
+    transition:
+      background 150ms ease,
+      color 150ms ease,
+      border-color 150ms ease;
+
+    &:hover {
+      background: $primaryStrong;
+    }
+  }
+}

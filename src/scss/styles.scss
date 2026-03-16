@@ -9,11 +9,13 @@
 @use "../_includes/components/small-event-card/small-event-card";
 @use "../_includes/components/small-blog-card/small-blog-card";
 @use "../_includes/components/about-card/about-card";
+@use "../_includes/components/large-event-card/large-event-card";
 @use "pages/index";
 @use "pages/gallery";
 @use "pages/about";
 @use "pages/contact";
 @use "pages/work-entry";
+@use "pages/eventpage";
 
 * {
   box-sizing: border-box;
@@ -46,4 +48,8 @@ h2 {
   margin: 0 0 0.6rem;
   color: $ink;
   font-family: $font-display;
+}
+
+ul {
+  list-style: none;
 }

@@ -1,1 +1,26 @@
-<section class="hero-section">This is the event page</section>
+{{#with (localize eventpage lang) as |eventpage_data|}}
+<section class="hero-section">
+  <div class="layout-container">
+    <h1>{{eventpage_data.title}}</h1>
+    <p>{{eventpage_data.subtext}}</p>
+  </div>
+</section>
+
+<section class="event-section">
+  <div class="layout-container">
+    <div class="title-container">
+      {{> icons/sparkles class="icon-xl"}}
+      <h2>{{eventpage_data.upcoming_events_title}}</h2>
+    </div>
+
+    <ul>
+      {{#each @root.collections.events}}
+      <li>
+        {{> components/large-event-card/large-event-card event=this.data event_url=this.url }}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+
+{{/with}}

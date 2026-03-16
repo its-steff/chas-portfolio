@@ -1,0 +1,21 @@
+<a class="large-event-card" href="{{event_url}}">
+  <span class="event-type-tag">{{lfield event "event_type" @root.lang}}</span>
+
+  <div>
+    <h3>{{lfield event "title" @root.lang}}</h3>
+    <p>{{lfield event "summary" @root.lang}}</p>
+  </div>
+
+  <div class="details-container">
+    <div class="details">
+      <span>
+        {{> icons/calendar class="icon-lg"}} {{eventMonth (lfield event "date" @root.lang)
+        @root.lang}} {{eventDay (lfield event "date" @root.lang) @root.lang}} {{eventYear (lfield
+        event "date" @root.lang)}}
+      </span>
+
+      <span>{{> icons/map-pin class="icon-lg"}} {{lfield event "location" @root.lang}} </span>
+    </div>
+    <div class="fake-button">{{lfield event "cta_link_text" @root.lang}}</div>
+  </div>
+</a>

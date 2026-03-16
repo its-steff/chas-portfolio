@@ -1,0 +1,14 @@
+en:
+  title: Events
+  subtext: Upcoming appearances, workshops, and community events.
+  upcoming_events_title: "Upcoming "
+  cta_title: Join the next event
+  cta_text: Want a signing, workshop, or live demo at your venue?
+  cta_button_text: Get in touch
+no:
+  title: Arrangementer
+  subtext: Kommende opptredener, workshops og arrangementer i fellesskapet.
+  upcoming_events_title: Kommende
+  cta_title: Bli med på neste arrangement
+  cta_text: Ønsker du signering, workshop eller live‑demo hos dere?
+  cta_button_text: Ta kontakt

@@ -168,12 +168,12 @@ collections:
           - {
               label: "Upcoming Events Title",
               name: "upcoming_events_title",
-              widget: string,
+              widget: "string",
               i18n: true,
             }
           - { label: "CTA title", name: "cta_title", widget: "string", i18n: true }
           - { label: "CTA text", name: "cta_text", widget: "string", i18n: true }
-          - { label: "CTA button text", name: "cta_button_text", widget: "string", i18n:true }
+          - { label: "CTA button text", name: "cta_button_text", widget: "string", i18n: true }
 
   - name: "navigation_routes"
     label: "Navigation Routes"

@@ -190,6 +190,14 @@ module.exports = function (eleventyConfig) {
       .format(date)
       .toUpperCase();
   });
+  eleventyConfig.addFilter("eventYear", (value) => {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    return new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(date);
+  });
 
   const iconMap = {
     feather: "icons/feather",
