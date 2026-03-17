@@ -174,6 +174,12 @@ collections:
           - { label: "CTA title", name: "cta_title", widget: "string", i18n: true }
           - { label: "CTA text", name: "cta_text", widget: "string", i18n: true }
           - { label: "CTA button text", name: "cta_button_text", widget: "string", i18n: true }
+      - label: "Blog Page"
+        name: "blog_page"
+        file: "src/_data/blogpage.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "string" }
 
   - name: "navigation_routes"
     label: "Navigation Routes"
@@ -186,7 +192,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Route (EN)", name: "route_en", widget: "string", required: true, i18n: duplicate }
+      - { label: "Route (EN)", name: "route_en", widget: "string", required: false, i18n: duplicate }
       - { label: "Route (NO)", name: "route_no", widget: "string", required: true, i18n: duplicate }
 
   - name: "published_books"
@@ -273,7 +279,10 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Hero image", name: "hero_image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Button text", name: "button_text", widget: "string" }
+      - { label: "Category tag", name: "category_tag", widget: "string" }
 
   - name: "illustrations"
     label: "Illustrations"

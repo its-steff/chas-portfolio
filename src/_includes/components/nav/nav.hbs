@@ -7,9 +7,15 @@
 
     <div class="desktop-nav">
       {{#each collections.navigation_routes}} {{#with (localize this.data @root.lang) as |page|}}
-      <a href="{{#if (eq @root.lang 'no')}}{{ page.route_no }}{{else}}{{ page.route_en }}{{/if}}">
+      {{#if (eq @root.lang 'no')}} {{#if page.route_no}}
+      <a href="{{ page.route_no }}">
         <span>{{ page.title }}</span>
       </a>
+      {{/if}} {{else}} {{#if page.route_en}}
+      <a href="{{ page.route_en }}">
+        <span>{{ page.title }}</span>
+      </a>
+      {{/if}} {{/if}}
       {{/with}} {{/each}}
       <button
         data-lang-toggle
@@ -28,9 +34,15 @@
       </summary>
       <div class="mobile-nav-panel">
         {{#each collections.navigation_routes}} {{#with (localize this.data @root.lang) as |page|}}
-        <a href="{{#if (eq @root.lang 'no')}}{{ page.route_no }}{{else}}{{ page.route_en }}{{/if}}">
+        {{#if (eq @root.lang 'no')}} {{#if page.route_no}}
+        <a href="{{ page.route_no }}">
           <span>{{ page.title }}</span>
         </a>
+        {{/if}} {{else}} {{#if page.route_en}}
+        <a href="{{ page.route_en }}">
+          <span>{{ page.title }}</span>
+        </a>
+        {{/if}} {{/if}}
         {{/with}} {{/each}}
         <button
           data-lang-toggle
