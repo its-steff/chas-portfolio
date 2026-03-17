@@ -174,13 +174,6 @@ collections:
           - { label: "CTA title", name: "cta_title", widget: "string", i18n: true }
           - { label: "CTA text", name: "cta_text", widget: "string", i18n: true }
           - { label: "CTA button text", name: "cta_button_text", widget: "string", i18n: true }
-      - label: "Blog Page"
-        name: "blog_page"
-        file: "src/_data/blogpage.yml"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro", name: "intro", widget: "string" }
-
   - name: "navigation_routes"
     label: "Navigation Routes"
     label_singular: "Route"
@@ -194,6 +187,16 @@ collections:
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Route (EN)", name: "route_en", widget: "string", required: false, i18n: duplicate }
       - { label: "Route (NO)", name: "route_no", widget: "string", required: true, i18n: duplicate }
+
+  - name: "blog_page"
+    label: "Blog Page"
+    files:
+      - label: "Blog Page"
+        name: "blog_page"
+        file: "src/_data/blogpage.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "string" }
 
   - name: "published_books"
     label: "Published Books"
