@@ -3,7 +3,7 @@
   <div class="layout-container">
     <div class="hero">
       <div class="hero-content">
-        <p class="hero-badge">{{ home_data.hero_tagline }}</p>
+        {{> components/badge/badge text=home_data.hero_tagline}}
         <h1>{{ home_data.hero_name }}</h1>
         <p class="intro">{{ home_data.intro }}</p>
         <div class="hero-actions">

@@ -7,7 +7,9 @@
 
   <div class="blog-post-card__body">
     <div class="blog-post-card__meta">
-      <span class="blog-post-card__tag">{{post.category_tag}}</span>
+      <span class="blog-post-card__tag">
+        {{> components/badge/badge theme="secondary" text=post.category_tag}}
+      </span>
       <span class="blog-post-card__date">
         {{> icons/calendar class="icon-sm"}} {{blogDate post.date "no"}}
       </span>

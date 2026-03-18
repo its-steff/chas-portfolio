@@ -1,5 +1,5 @@
 <a class="large-event-card" href="{{event_url}}">
-  <span class="event-type-tag">{{lfield event "event_type" @root.lang}}</span>
+  {{> components/badge/badge theme="bold" text=(lfield event "event_type" @root.lang)}}
 
   <div>
     <h3>{{lfield event "title" @root.lang}}</h3>

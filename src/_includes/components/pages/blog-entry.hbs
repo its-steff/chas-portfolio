@@ -6,7 +6,7 @@ page_class: blog-entry-page
 {{#if hero_image}}
 <section class="blog-entry-hero-media">
   <img src="{{hero_image}}" alt="{{title}}" />
-  <div class="blog-entry-hero-overlay"></div> 
+  <div class="blog-entry-hero-overlay"></div>
 </section>
 {{/if}}
 
@@ -18,8 +18,7 @@ page_class: blog-entry-page
       </a>
 
       <header class="blog-entry-header">
-        {{#if category_tag}}
-        <span class="blog-entry-badge">{{category_tag}}</span>
+        {{#if category_tag}} {{> components/badge/badge theme="secondary" text=category_tag}}
         {{/if}}
 
         <h1>{{title}}</h1>
