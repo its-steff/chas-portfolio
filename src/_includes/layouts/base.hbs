@@ -17,7 +17,7 @@
       {{> components/nav/nav}}
 
       <main
-        class="page-main {{page_class}}{{#if (or (eq page_class 'about-page') (eq page_class 'event-page') (eq page_class 'contact-page') )}} secondary{{/if}}"
+        class="page-main {{page_class}}{{#if (oneOf page_class 'about-page' 'event-page' 'blog-entry-page' 'contact-page')}} secondary{{/if}}"
       >
         {{{ content }}}
       </main>

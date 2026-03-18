@@ -3,25 +3,36 @@ layout: layouts/base.hbs
 page_class: blog-entry-page
 ---
 
-<section class="blog-entry-hero">
-  <div class="layout-container">
-    <a class="blog-entry-back" href="/no/blogg/">Tilbake til blogg</a>
-    <h1>{{title}}</h1>
-    <p>{{summary}}</p>
-    <span class="blog-entry-date">{{> icons/calendar class="icon-sm"}} {{blogDate date lang}}</span>
-  </div>
-</section>
-
 {{#if hero_image}}
-<section class="blog-entry-media">
-  <div class="layout-container">
-    <img src="{{hero_image}}" alt="{{title}}" />
-  </div>
+<section class="blog-entry-hero-media">
+  <img src="{{hero_image}}" alt="{{title}}" />
+  <div class="blog-entry-hero-overlay"></div>
 </section>
 {{/if}}
 
-<section class="blog-entry-body">
+<article class="blog-entry-article">
   <div class="layout-container">
-    <article>{{{content}}}</article>
+    <div class="blog-entry-shell">
+      <a class="blog-entry-back" href="/no/blogg/">
+        {{> icons/arrow-left class="icon-sm"}} Tilbake til blogg
+      </a>
+
+      <header class="blog-entry-header">
+        {{#if category_tag}}
+        <span class="blog-entry-badge">{{category_tag}}</span>
+        {{/if}}
+
+        <h1>{{title}}</h1>
+        {{#if summary}}
+        <p class="blog-entry-summary">{{summary}}</p>
+        {{/if}}
+
+        <div class="blog-entry-meta">
+          <span>{{> icons/calendar class="icon-sm"}} {{blogDate date "no"}}</span>
+        </div>
+      </header>
+
+      <div class="blog-entry-body">{{{content}}}</div>
+    </div>
   </div>
-</section>
+</article>
