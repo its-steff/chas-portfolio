@@ -9,14 +9,24 @@
 
 <section class="post-feed-section">
   <div class="layout-container">
-    <a class="featured-card" href="/">
+    <a class="featured-post" href="/">
       {{#each (take @root.collections.blog_posts 1)}}
       <img src="{{this.data.hero_image}}" alt="picture here" />
       <div class="text-content">
         <h2>{{this.data.title}}</h2>
         <p>{{this.data.summary}}</p>
+        <span class="date"
+          >{{> icons/calendar class="icon-sm"}} {{blogDate this.data.date "no"}}</span
+        >
+        <div class="fake-button">
+          {{this.data.button_text}} {{> icons/arrow-right class="icon/sm"}}
+        </div>
       </div>
       {{/each}}
     </a>
+
+    <div class="posts-container">
+      
+    </div>
   </div>
 </section>

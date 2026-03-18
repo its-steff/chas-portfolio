@@ -1273,37 +1273,67 @@
 .blogg-page .post-feed-section {
   margin-top: 56px;
 }
-.blogg-page .post-feed-section .featured-card {
+.blogg-page .post-feed-section .featured-post {
   background-color: #fff;
   border: 1px solid rgba(20, 184, 166, 0.2);
   border-radius: 12px;
   display: block;
   text-decoration: none;
 }
-.blogg-page .post-feed-section .featured-card img {
+.blogg-page .post-feed-section .featured-post img {
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: 12px 12px 0 0px;
 }
-.blogg-page .post-feed-section .featured-card .text-content {
+.blogg-page .post-feed-section .featured-post .text-content {
   padding: 24px;
 }
-.blogg-page .post-feed-section .featured-card .text-content h2 {
+.blogg-page .post-feed-section .featured-post .text-content h2 {
   text-align: center;
 }
-.blogg-page .post-feed-section .featured-card:hover {
+.blogg-page .post-feed-section .featured-post .text-content .date {
+  color: #6b5d54;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.blogg-page .post-feed-section .featured-post .text-content .date svg {
+  margin-bottom: 2px;
+}
+.blogg-page .post-feed-section .featured-post .text-content .fake-button {
+  background-color: #14b8a6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #14b8a6;
+  padding: 0.68rem 1.2rem;
+  margin-top: 24px;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.blogg-page .post-feed-section .featured-post .text-content .fake-button:hover {
+  background: #119f90;
+}
+.blogg-page .post-feed-section .featured-post:hover {
   cursor: pointer;
 }
 @media (min-width: 900px) {
   .blogg-page .hero-section p {
     max-width: 50vw;
   }
-  .blogg-page .post-feed-section .featured-card {
+  .blogg-page .post-feed-section .featured-post {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 50vh;
+  }
+  .blogg-page .post-feed-section .featured-post img {
+    border-radius: 12px 0 0 12px;
   }
 }
 
