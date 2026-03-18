@@ -26,7 +26,9 @@
     </a>
 
     <div class="posts-container">
-      
+      {{#each @root.collections.blog_posts}} {{#unless @first}} {{>
+      components/blog-post-card/blog-post-card post=this.data post_url=(localizedUrl this.url @root.lang)}}
+      {{/unless}} {{/each}}
     </div>
   </div>
 </section>
