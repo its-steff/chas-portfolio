@@ -1364,14 +1364,14 @@
   border-radius: 12px;
 }
 
-.blogg-page p {
+.blog-page p {
   color: #6b5d54;
 }
-.blogg-page .hero-section {
+.blog-page .hero-section {
   border-bottom: 1px solid rgba(20, 184, 166, 0.2);
   padding-bottom: 56px;
 }
-.blogg-page .hero-section h1 {
+.blog-page .hero-section h1 {
   margin: 0 0 1rem;
   font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
   line-height: 1.05;
@@ -1379,46 +1379,46 @@
   font-family: "Cinzel", serif;
   font-weight: 500;
 }
-.blogg-page .hero-section p {
+.blog-page .hero-section p {
   text-align: center;
 }
-.blogg-page .hero-section .layout-container {
+.blog-page .hero-section .layout-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.blogg-page .post-feed-section {
+.blog-page .post-feed-section {
   margin-top: 56px;
 }
-.blogg-page .post-feed-section .featured-post {
+.blog-page .post-feed-section .featured-post {
   background-color: #fff;
   border: 1px solid rgba(20, 184, 166, 0.2);
   border-radius: 12px;
   display: block;
   text-decoration: none;
 }
-.blogg-page .post-feed-section .featured-post img {
+.blog-page .post-feed-section .featured-post img {
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: 12px 12px 0 0px;
 }
-.blogg-page .post-feed-section .featured-post .text-content {
+.blog-page .post-feed-section .featured-post .text-content {
   padding: 24px;
 }
-.blogg-page .post-feed-section .featured-post .text-content h2 {
+.blog-page .post-feed-section .featured-post .text-content h2 {
   text-align: center;
 }
-.blogg-page .post-feed-section .featured-post .text-content .date {
+.blog-page .post-feed-section .featured-post .text-content .date {
   color: #6b5d54;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.blogg-page .post-feed-section .featured-post .text-content .date svg {
+.blog-page .post-feed-section .featured-post .text-content .date svg {
   margin-bottom: 2px;
 }
-.blogg-page .post-feed-section .featured-post .text-content .fake-button {
+.blog-page .post-feed-section .featured-post .text-content .fake-button {
   background-color: #14b8a6;
   display: flex;
   align-items: center;
@@ -1433,37 +1433,37 @@
   margin-top: 24px;
   transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
 }
-.blogg-page .post-feed-section .featured-post .text-content .fake-button:hover {
+.blog-page .post-feed-section .featured-post .text-content .fake-button:hover {
   background: #119f90;
 }
-.blogg-page .post-feed-section .featured-post:hover {
+.blog-page .post-feed-section .featured-post:hover {
   cursor: pointer;
 }
-.blogg-page .post-feed-section .posts-container {
+.blog-page .post-feed-section .posts-container {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 @media (min-width: 900px) {
-  .blogg-page .hero-section p {
+  .blog-page .hero-section p {
     max-width: 50vw;
   }
-  .blogg-page .post-feed-section .featured-post {
+  .blog-page .post-feed-section .featured-post {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 50vh;
   }
-  .blogg-page .post-feed-section .featured-post img {
+  .blog-page .post-feed-section .featured-post img {
     border-radius: 12px 0 0 12px;
   }
-  .blogg-page .post-feed-section .posts-container {
+  .blog-page .post-feed-section .posts-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 1200px) {
-  .blogg-page .post-feed-section .posts-container {
+  .blog-page .post-feed-section .posts-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
