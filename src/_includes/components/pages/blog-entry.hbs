@@ -1,0 +1,27 @@
+---
+layout: layouts/base.hbs
+page_class: blog-entry-page
+---
+
+<section class="blog-entry-hero">
+  <div class="layout-container">
+    <a class="blog-entry-back" href="/no/blogg/">Tilbake til blogg</a>
+    <h1>{{title}}</h1>
+    <p>{{summary}}</p>
+    <span class="blog-entry-date">{{> icons/calendar class="icon-sm"}} {{blogDate date lang}}</span>
+  </div>
+</section>
+
+{{#if hero_image}}
+<section class="blog-entry-media">
+  <div class="layout-container">
+    <img src="{{hero_image}}" alt="{{title}}" />
+  </div>
+</section>
+{{/if}}
+
+<section class="blog-entry-body">
+  <div class="layout-container">
+    <article>{{{content}}}</article>
+  </div>
+</section>

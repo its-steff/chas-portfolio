@@ -9,8 +9,8 @@
 
 <section class="post-feed-section">
   <div class="layout-container">
-    <a class="featured-post" href="/">
-      {{#each (take @root.collections.blog_posts 1)}}
+    {{#each (take @root.collections.blog_posts 1)}}
+    <a class="featured-post" href="{{this.url}}">
       <img src="{{this.data.hero_image}}" alt="picture here" />
       <div class="text-content">
         <h2>{{this.data.title}}</h2>
@@ -22,12 +22,12 @@
           {{this.data.button_text}} {{> icons/arrow-right class="icon/sm"}}
         </div>
       </div>
-      {{/each}}
     </a>
+    {{/each}}
 
     <div class="posts-container">
       {{#each @root.collections.blog_posts}} {{#unless @first}} {{>
-      components/blog-post-card/blog-post-card post=this.data post_url=(localizedUrl this.url @root.lang)}}
+      components/blog-post-card/blog-post-card post=this.data post_url=this.url}}
       {{/unless}} {{/each}}
     </div>
   </div>
