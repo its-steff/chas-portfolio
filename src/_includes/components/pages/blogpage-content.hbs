@@ -6,3 +6,17 @@
     {{/if}}
   </div>
 </section>
+
+<section class="post-feed-section">
+  <div class="layout-container">
+    <a class="featured-card" href="/">
+      {{#each (take @root.collections.blog_posts 1)}}
+      <img src="{{this.data.hero_image}}" alt="picture here" />
+      <div class="text-content">
+        <h2>{{this.data.title}}</h2>
+        <p>{{this.data.summary}}</p>
+      </div>
+      {{/each}}
+    </a>
+  </div>
+</section>

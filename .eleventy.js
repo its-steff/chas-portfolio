@@ -198,6 +198,18 @@ module.exports = function (eleventyConfig) {
       timeZone: "UTC",
     }).format(date);
   });
+  eleventyConfig.addFilter("blogDate", (value, lang) => {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    const locale = typeof lang === "string" && lang ? lang : "en";
+    const localeMap = { en: "en-US", no: "nb-NO" };
+    return new Intl.DateTimeFormat(localeMap[locale] || "en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC",
+    }).format(date);
+  });
 
   const iconMap = {
     feather: "icons/feather",
