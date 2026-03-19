@@ -13,22 +13,22 @@
 
 <section class="information-section">
   <div class="layout-container">
-    <div class="card-container">
-      <div class="card">
+    <ul class="card-container">
+      <li class="card">
         <span> {{> icons/mail class="icon-lg logo-mark"}} {{contact_data.email_title}}</span>
         <a href="mailto:{{contact_data.email_address}}"> {{contact_data.email_address}}</a>
-      </div>
+      </li>
 
-      <div class="card">
+      <li class="card">
         <span>{{> icons/globe class="icon-lg logo-mark"}} {{contact_data.location_title}}</span>
         <p>{{contact_data.location_text}}</p>
-      </div>
+      </li>
 
-      <div class="card">
+      <li class="card">
         <span>{{> icons/scroll class="icon-lg logo-mark"}} {{contact_data.information_title}}</span>
         <p>{{contact_data.information_text}}</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 

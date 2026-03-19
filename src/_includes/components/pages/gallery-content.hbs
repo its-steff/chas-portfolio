@@ -12,13 +12,13 @@
   <div class="layout-container">
     {{#with (concat (reverse @root.collections.published_books) @root.collections.illustrations) as
     |gallery_items|}}
-    <div class="books-grid books-grid-gallery">
+    <ul class="books-grid books-grid-gallery">
       {{#each gallery_items}}
-      <div class="gallery-item {{#if (gt @index 8)}}is-hidden{{/if}}" data-reveal-item="gallery">
+      <li class="gallery-item {{#if (gt @index 8)}}is-hidden{{/if}}" data-reveal-item="gallery">
         {{> components/work-card/work-card book=this.data book_url=this.url}}
-      </div>
+      </li>
       {{/each}}
-    </div>
+    </ul>
     {{#if (gt (count gallery_items) 9)}}
     <button
       class="gallery-view-more"
