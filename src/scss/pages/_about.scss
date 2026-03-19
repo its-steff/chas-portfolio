@@ -1,4 +1,5 @@
 @use "../tokens" as *;
+@use "../mixins" as mixins;
 .about-page {
   .about-hero {
     border-bottom: 1px solid $line;
@@ -13,12 +14,7 @@
   }
 
   .about-hero__text h1 {
-    margin: 0 0 1rem;
-    font-size: clamp(2.35rem, 5vw, 3.5rem);
-    line-height: 1.05;
-    color: $ink;
-    font-family: $font-display;
-    font-weight: 500;
+    @include mixins.page-titles;
   }
 
   .about-hero__text p {

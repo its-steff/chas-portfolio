@@ -1,16 +1,12 @@
 @use "../tokens" as *;
+@use "../mixins" as mixins;
 
 .gallery-page {
   .hero-section {
     border-bottom: 1px solid $line;
     padding-bottom: 56px;
     h1 {
-      margin: 0 0 1rem;
-      font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
-      line-height: 1.05;
-      color: $ink;
-      font-family: $font-display;
-      font-weight: 500;
+      @include mixins.page-titles;
     }
 
     p {

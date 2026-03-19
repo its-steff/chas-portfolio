@@ -921,7 +921,7 @@
 }
 .about-page .about-hero__text h1 {
   margin: 0 0 1rem;
-  font-size: clamp(2.35rem, 5vw, 3.5rem);
+  font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
   line-height: 1.05;
   color: #2a2520;
   font-family: "Cinzel", serif;
@@ -1083,7 +1083,7 @@
 }
 .contact-page .hero-section h1 {
   margin: 0 0 1rem;
-  font-size: clamp(2.35rem, 5vw, 3.5rem);
+  font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
   line-height: 1.05;
   color: #2a2520;
   font-family: "Cinzel", serif;

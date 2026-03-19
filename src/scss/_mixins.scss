@@ -1,0 +1,10 @@
+@use "tokens" as *;
+
+@mixin page-titles {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
+  line-height: 1.05;
+  color: $ink;
+  font-family: $font-display;
+  font-weight: 500;
+}
