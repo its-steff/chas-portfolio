@@ -1148,9 +1148,6 @@
 .contact-page .faq-content h2 {
   margin: 0 0 24px;
   text-align: center;
-  font-size: clamp(1.75rem, 2vw + 1rem, 2.4rem);
-  font-family: "Cinzel", serif;
-  color: #2a2520;
 }
 .contact-page .faq-card {
   background-color: #ffffff;
