@@ -17,7 +17,7 @@ page_class: blog-entry-page
         {{> icons/arrow-left class="icon-sm"}} Tilbake til blogg
       </a>
 
-      <header class="blog-entry-header">
+      <div class="blog-entry-header">
         {{#if category_tag}} {{> components/badge/badge theme="secondary" text=category_tag}}
         {{/if}}
 
@@ -29,7 +29,7 @@ page_class: blog-entry-page
         <div class="blog-entry-meta">
           <span>{{> icons/calendar class="icon-sm"}} {{blogDate date "no"}}</span>
         </div>
-      </header>
+      </div>
 
       <div class="blog-entry-body">{{{content}}}</div>
     </div>
