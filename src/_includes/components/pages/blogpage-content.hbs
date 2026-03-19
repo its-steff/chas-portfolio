@@ -25,10 +25,14 @@
     </a>
     {{/each}}
 
-    <div class="posts-container">
-      {{#each @root.collections.blog_posts}} {{#unless @first}} {{>
-      components/blog-post-card/blog-post-card post=this.data post_url=this.url}}
-      {{/unless}} {{/each}}
-    </div>
+    <ul class="posts-container">
+      {{#each @root.collections.blog_posts}}
+      {{#unless @first}}
+      <li class="posts-container__item">
+        {{> components/blog-post-card/blog-post-card post=this.data post_url=this.url}}
+      </li>
+      {{/unless}}
+      {{/each}}
+    </ul>
   </div>
 </section>

@@ -508,6 +508,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  flex: 1;
 }
 
 .blog-post-card__meta {
@@ -551,7 +552,7 @@
 }
 
 .blog-post-card__cta {
-  margin-top: 0.4rem;
+  margin-top: auto;
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -832,24 +833,6 @@
 .home-page .feed-cards {
   display: grid;
   gap: 0.9rem;
-}
-.home-page .feed-more-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  border: 1px solid rgba(20, 184, 166, 0.35);
-  border-radius: 6px;
-  color: #2a2520;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-decoration: none;
-  background: transparent;
-  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
-}
-.home-page .feed-more-link:hover {
-  background: rgba(20, 184, 166, 0.08);
-  border-color: rgba(20, 184, 166, 0.5);
 }
 @media (min-width: 900px) {
   .home-page .hero {
@@ -1438,9 +1421,20 @@
 }
 .blog-page .post-feed-section .posts-container {
   margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  align-items: stretch;
+}
+.blog-page .post-feed-section .posts-container__item {
+  margin: 0;
+  display: flex;
+}
+.blog-page .post-feed-section .posts-container__item .blog-post-card {
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 900px) {
   .blog-page .hero-section p {
@@ -1606,4 +1600,5 @@ h2 {
 
 ul {
   list-style: none;
+  padding: 0;
 }

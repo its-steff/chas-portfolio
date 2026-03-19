@@ -30,9 +30,9 @@
       <h2>{{ about_data.skills_title }}</h2>
       <p>{{ about_data.skills_subtext }}</p>
     </div>
-    <div class="skills-section__card-container">
+    <ul class="skills-section__card-container">
       {{#each about_data.skills_list}}
-      <div class="skills-section__card">
+      <li class="skills-section__card">
         {{#if (iconPartial this.skill.icon_name)}}
         <div class="skills-section__icon-container">
           {{> (iconPartial this.skill.icon_name class="icon-md") class="skills-section__icon" }}
@@ -40,9 +40,9 @@
         {{/if}}
         <h3>{{ this.skill.name }}</h3>
         <span>{{ this.skill.description }}</span>
-      </div>
+      </li>
       {{/each}}
-    </div>
+    </ul>
   </div>
 </section>
 
